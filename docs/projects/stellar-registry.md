@@ -260,8 +260,10 @@ Description from last quarter:
 #### ⚠️ Pending
 
 - logo & icons: https://github.com/stellar-registry/ui/issues/41
-- docs consolidation: no issue/PR yet
-- domain move discussion: no link yet
+- docs consolidation: https://github.com/stellar-registry/ui/issues/42
+- domain move discussion: no public link. History of discussion:
+
+  - @chadoh raised the issue in a thread within [SDF Slack](https://theahaco.slack.com/archives/C04B02ABF37/p1783975268185649?thread_ts=1783975086.044619&cid=C04B02ABF37); no one responded
 
 ### D14: Extend `import_contract!` macro to support SAC and XLM
 
