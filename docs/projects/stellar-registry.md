@@ -259,7 +259,9 @@ Description from last quarter:
 
 #### ⚠️ Pending
 
-No current issues/PRs
+- logo & icons: https://github.com/stellar-registry/ui/issues/41
+- docs consolidation: no issue/PR yet
+- domain move discussion: no link yet
 
 ### D14: Extend `import_contract!` macro to support SAC and XLM
 
