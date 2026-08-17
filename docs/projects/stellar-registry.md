@@ -243,7 +243,8 @@ Description from last quarter:
 
 #### ✅ Complete
 
-- https://github.com/stellar-registry/ui/pull/40
+- Work completed in PR: https://github.com/stellar-registry/ui/pull/40
+- Contract detail pages display contract history
 
 ### D13: Documentation consolidation & redesign; potential migration of rgstry.xyz
 
