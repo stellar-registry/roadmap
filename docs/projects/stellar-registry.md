@@ -241,9 +241,9 @@ Description from last quarter:
 >
 > Proof: Contract detail pages on [rgstry.xyz/contracts](https://testnet.rgstry.xyz/contracts) display information about full contract history.
 
-#### ⚠️ Pending
+#### ✅ Complete
 
-No current issues/PRs
+- https://github.com/stellar-registry/ui/pull/40
 
 ### D13: Documentation consolidation & redesign; potential migration of rgstry.xyz
 
