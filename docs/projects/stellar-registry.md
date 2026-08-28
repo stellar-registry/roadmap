@@ -142,13 +142,13 @@ Description from last quarter:
 
 Description from last quarter:
 
-> Ship the governance proposal forms (stellar-registry/ui#16): propose adding a Wasm or contract to the root registry, creating a subregistry, or changing owners — executed through the Tansu-DAO-gated registry manager contract that merged in Q2.
+> Ship the governance proposal forms (stellar-registry/ui#51): propose adding a Wasm or contract to the root registry, creating a subregistry, or changing owners — executed through the Tansu-DAO-gated registry manager contract that merged in Q2.
 >
 > Proof: a governance proposal created from rgstry.xyz, voted on in Tansu, and executed on-chain via `trigger`, with the transaction linked.
 
 #### ⚠️ Pending
 
-No current associated issues/PRs. No one assigned.
+- https://github.com/stellar-registry/ui/issues/51 —— @pselle to kick off with separate PRs per form.
 
 ### D7: Registry Documentation & Education (carried from Q2)
 
