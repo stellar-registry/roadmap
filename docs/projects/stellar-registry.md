@@ -132,15 +132,11 @@ Description from last quarter:
 >
 > Proof: all features live on production rgstry.xyz, manually verified against at least one mainnet contract.
 
-#### ⚠️ Pending
+#### ✅ Complete
 
-- https://github.com/stellar-registry/ui/pull/23
-  - prereqs completed by @b4sen
-    - https://github.com/stellar-registry/indexer/pull/32
-    - https://github.com/stellar-registry/indexer/pull/35
-    - https://github.com/stellar-registry/indexer/pull/36
-  - no one currently leading ui effort
-- https://github.com/stellar-registry/ui/pull/24 (@zachfedor to complete)
+- https://github.com/stellar-registry/ui/pull/23, Deploy from Wasm
+  - prereq: https://github.com/stellar-registry/indexer/pull/32, Extract Wasm Details webhook
+- https://github.com/stellar-registry/ui/pull/24, Contract Explorer
 
 ### D6: Governance Operations UI
 
