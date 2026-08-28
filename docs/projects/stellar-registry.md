@@ -191,6 +191,7 @@ Description from last quarter:
 - We did not receive the grant to work on this RFP.
 - We continue to participate in [ongoing RFP discussions](https://github.com/orgs/stellar/discussions/1945#discussioncomment-17897997).
 - Who won the RFP? Do they want us to do anything?
+- A solution is needed —— "If anyone is sitting on reproduced builds with nowhere to publish them, we are glad to host the records and freeze the evidence behind them in the meantime." https://github.com/orgs/stellar/discussions/1945#discussioncomment-18179311
 
 ### D10: guide Tansu evolution to support Registry needs
 
