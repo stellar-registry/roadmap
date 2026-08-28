@@ -174,9 +174,7 @@ Description from last quarter:
 
 #### ⚠️ Pending
 
-Currently under discussion in internal `#stellar-registry` channel. Tracking issue unassigned:
-
-- https://github.com/stellar-registry/cli/issues/51
+Tentative design finalized in issue comments (scroll down); currently unassigned: https://github.com/stellar-registry/cli/issues/51
 
 ### D9: Surface emerging Source Verification information
 
