@@ -205,7 +205,7 @@ Description from last quarter:
 
 #### ⚠️ Pending
 
-No current tracking issues or PRs. Needs engineering design discussion with Tansu team.
+- @tupui to port https://github.com/stellar-registry/contracts/tree/main/contracts/registry-tansu-manager to `Consulting-Manao/tansu` repo and create documentation for how to use it to set up a Tansu project to manage a smart contract as admin, as noted in Radicle tracking issue https://radicle.network/nodes/radicle.consulting-manao.com/rad%3AzssaAF91kxuquZmZCV2SiK2FNX6s/issues/3111b944792c0b5da9f6c8f88e52cdeebd1a3d82
 
 ### D11: Registry GH Workflow to publish Wasms and upgrade contracts
 
