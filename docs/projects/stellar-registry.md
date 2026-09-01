@@ -138,6 +138,10 @@ Description from last quarter:
   - prereq: https://github.com/stellar-registry/indexer/pull/32, Extract Wasm Details webhook
 - https://github.com/stellar-registry/ui/pull/24, Contract Explorer
 
+#### ⚠️ Pending
+
+- Verified Build Badges: equivalent with [D15](#d15-verified-build-integration-with-stellar-expert), tracked by stellar-registry/ui#38
+
 ### D6: Governance Operations UI
 
 Description from last quarter:
