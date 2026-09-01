@@ -253,9 +253,12 @@ Description from last quarter:
 >
 > Proof: redesigned site live, videos highlighted throughout, and question of domain's permanent home settled with decision documented and justified.
 
-#### ⚠️ Pending
+#### ✅ Complete
 
 - logo & icons: https://github.com/stellar-registry/ui/issues/41
+
+#### ⚠️ Pending
+
 - docs consolidation: https://github.com/stellar-registry/ui/issues/42
 - domain move discussion: no public link. History of discussion:
 
