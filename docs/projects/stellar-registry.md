@@ -166,12 +166,15 @@ Description from last quarter:
 
 #### ⚠️ Pending
 
-- https://github.com/stellar-registry/cli/issues/50, main tracking issue with many sub-issues:
-  - https://github.com/stellar-scaffold/cli/issues/437, Scaffold Tutorial's Registry docs updated
-  - https://github.com/stellar-registry/cli/issues/34, Present at Stellar Community Call: tentatively scheduled for either Sep 17 or 24
-  - Q3 Stretch Goals:
-    - https://github.com/stellar-registry/cli/issues/45, video: replace manual oz contract usage & deploy with The Registry Way (Q3 Stretch Goal)
-    - https://github.com/stellar-registry/cli/issues/44, video: publishing/releasing using CI workflow (Q3 Stretch Goal)
+https://github.com/stellar-registry/cli/issues/50, main tracking issue with many sub-issues:
+
+- https://github.com/stellar-scaffold/cli/issues/437, Scaffold Tutorial's Registry docs updated
+- https://github.com/stellar-registry/cli/issues/34, Present at Stellar Community Call: tentatively scheduled for either Sep 17 or 24
+
+Some sub-issues should always have been marked as Q3 stretch goals:
+
+- https://github.com/stellar-registry/cli/issues/45, video: replace manual oz contract usage & deploy with The Registry Way (Q3 Stretch Goal)
+- https://github.com/stellar-registry/cli/issues/44, video: publishing/releasing using CI workflow (Q3 Stretch Goal)
 
 
 ### D8: Support named G-addresses
