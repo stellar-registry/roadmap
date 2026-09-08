@@ -137,10 +137,8 @@ Description from last quarter:
 - https://github.com/stellar-registry/ui/pull/23, Deploy from Wasm
   - prereq: https://github.com/stellar-registry/indexer/pull/32, Extract Wasm Details webhook
 - https://github.com/stellar-registry/ui/pull/24, Contract Explorer
-
-#### ⚠️ Pending
-
-- Verified Build Badges: equivalent with [D15](#d15-verified-build-integration-with-stellar-expert), tracked by stellar-registry/ui#38
+- https://github.com/stellar-registry/ui/pull/57, Verified Build (SEP-55) badge from Stellar Expert data
+  - prereq: https://github.com/stellar-registry/indexer/pull/40, Fetch data once-per-registered contract on the indexer side
 
 ### D6: Governance Operations UI
 
@@ -162,9 +160,19 @@ Description from last quarter:
 >
 > Proof: documentation live on the Registry docs site and videos on The Aha Company's YouTube channel.
 
+#### ✅ Complete
+
+- Stellar Registry Full Walk-Through published to The Aha Company YouTube, https://www.youtube.com/watch?v=xAlWmJOdMSQ, takes the place of originally-planned many-video approach (https://github.com/stellar-registry/cli/issues/46, https://github.com/stellar-registry/cli/issues/47, https://github.com/stellar-registry/cli/issues/48)
+
 #### ⚠️ Pending
 
-- https://github.com/stellar-registry/cli/issues/50 (assigned to @chadoh, who would indeed like to work on this after D5 is complete, but is willing to let someone else take the lead if they really wanna)
+- https://github.com/stellar-registry/cli/issues/50, main tracking issue with many sub-issues:
+  - https://github.com/stellar-scaffold/cli/issues/437, Scaffold Tutorial's Registry docs updated
+  - https://github.com/stellar-registry/cli/issues/34, Present at Stellar Community Call: tentatively scheduled for either Sep 17 or 24
+  - Q3 Stretch Goals:
+    - https://github.com/stellar-registry/cli/issues/45, video: replace manual oz contract usage & deploy with The Registry Way (Q3 Stretch Goal)
+    - https://github.com/stellar-registry/cli/issues/44, video: publishing/releasing using CI workflow (Q3 Stretch Goal)
+
 
 ### D8: Support named G-addresses
 
@@ -243,7 +251,12 @@ Description from last quarter:
 #### ✅ Complete
 
 - Work completed in PR: https://github.com/stellar-registry/ui/pull/40
+  - Some fixes: https://github.com/stellar-registry/ui/pull/62
 - Contract detail pages display contract history
+
+#### ⚠️ Pending
+
+Stretch Goal: UI improvements to make "Versions" experience consistent across app: https://github.com/stellar-registry/ui/issues/63
 
 ### D13: Documentation consolidation & redesign; potential migration of rgstry.xyz
 
@@ -303,10 +316,16 @@ Extra details from [Q3 Proposal discussion](https://github.com/SCF-Public-Goods-
 >
 > In addition, in our "completion notes" for D6, we stated that we were targeting contract pages, "since we established Stellar Expert has no Wasm-level pages." We've changed our thinking on this, as documented in a new issue, stellar-registry/ui#38. This is a sub-issue of our original tracking issue stellar-registry/cli#35, which we will continue to use as our tracking issue for Q3.
 
+#### ✅ Complete
+
+- https://github.com/stellar-registry/ui/pull/57, Verified Build (SEP-55) badge from Stellar Expert data for _Contracts_ (done to satisfy [D5](#d5-contract-explorer-deploy-button--verified-build-badges-carried-from-q2))
+  - prereq: https://github.com/stellar-registry/indexer/pull/40, Fetch data once-per-registered contract on the indexer side
+
 #### ⚠️ Pending
 
 - stellar-registry/ui#38
-- stellar-registry/ui#35
+- stellar-registry/cli#35
+
 
 ## Q3 Stretch Goals
 
