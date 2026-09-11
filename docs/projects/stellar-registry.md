@@ -323,12 +323,12 @@ Extra details from [Q3 Proposal discussion](https://github.com/SCF-Public-Goods-
 
 - https://github.com/stellar-registry/ui/pull/57, Verified Build (SEP-55) badge from Stellar Expert data for _Contracts_ (done to satisfy [D5](#d5-contract-explorer-deploy-button--verified-build-badges-carried-from-q2))
   - prereq: https://github.com/stellar-registry/indexer/pull/40, Fetch data once-per-registered contract on the indexer side
-
-#### ⚠️ Pending
-
 - stellar-registry/ui#38
+  - stellar-registry/ui#57
+  - stellar-registry/ui#64
+  - stellar-registry/indexer#48
+  - stellar-registry/indexer#40
 - stellar-registry/cli#35
-
 
 ## Q3 Stretch Goals
 
