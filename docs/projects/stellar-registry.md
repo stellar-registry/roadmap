@@ -296,9 +296,9 @@ Description from last quarter:
 
 Note that `import_asset!` was already available and reasonable as an alternative at the end of Q2. The goal here is to ensure that `import_contract!(xlm)` and similar (such as `import_contract!("circle/usdc")`) work as-expected, so that users have a choice between `import_asset!` and `import_contract!`, where `import_contract!` alternative works for any SAC registered in [stellar.rgstry.xyz](https://rgstry.xyz).
 
-#### ⚠️ Pending
+#### ✅ Complete
 
-No current issues/PRs. @willemneal, in a conversation with @chadoh, committed to working on this after D11. ~2d effort.
+- https://github.com/stellar-registry/cli/pull/64
 
 ### D15: Verified Build Integration with Stellar Expert
 
