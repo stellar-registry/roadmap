@@ -51,7 +51,7 @@ In Q3 2026...
 
 ## Q3 Deliverables
 
-### D1: Complete the Mainnet Launch (carried from Q2)
+### ✅ D1: Complete the Mainnet Launch (carried from Q2)
 
 Description from last quarter:
 
@@ -76,7 +76,7 @@ Q3 stretch goal (not hard-committed in Q3 deliverables; nice-to-have):
 
 - stellar-registry/cli#14
 
-### D2: Release `import_contract!` (carried from Q2)
+### ✅ D2: Release `import_contract!` (carried from Q2)
 
 Description from last quarter:
 
@@ -99,7 +99,7 @@ Q3 stretch goal (not hard-committed in Q3 deliverables; nice-to-have):
 
 Once this is done, people will have not just the documentation examples from crates.io and docs.rs, but a cookbook-style example using real working code.
 
-### D3: Flagged Contract Enforcement at Build Time (carried from Q2)
+### ✅ D3: Flagged Contract Enforcement at Build Time (carried from Q2)
 
 Description from last quarter:
 
@@ -112,7 +112,7 @@ Description from last quarter:
 - `import_contract!` introductory PR added flagged-contract handling (see [in PR's `crates/stellar-registry-macro/src/contract.rs#157`](https://github.com/stellar-registry/cli/pull/17/changes#diff-c9fd228d9177e15a059824ea2767bae20b7a7a80a87ddcbed776737b87f3b191R157-R161) or [on `main`](https://github.com/stellar-registry/cli/blob/a492843105391d401b5bab351a591dea2c6ca2d3/crates/stellar-registry-macro/src/contract.rs#L157-L161))
 - Integration test demonstrating/proving this behavior added in follow-up stellar-registry/cli#60 (Note that this test enforces `stellar registry fetch-contract-id` to fail-by-default for flagged contracts. Since `import_contract!` relies on `fetch-contract-id`, it also satisfies the requirement to prove the behavior for the macro.)
 
-### D4: Finish Search, Pagination & Sorting on rgstry.xyz (carried from Q2)
+### ✅ D4: Finish Search, Pagination & Sorting on rgstry.xyz (carried from Q2)
 
 Description from last quarter:
 
@@ -124,7 +124,7 @@ Description from last quarter:
 
 - stellar-registry/indexer#24
 
-### D5: Contract Explorer, Deploy Button & Verified-Build Badges (carried from Q2)
+### ✅ D5: Contract Explorer, Deploy Button & Verified-Build Badges (carried from Q2)
 
 Description from last quarter:
 
@@ -140,7 +140,7 @@ Description from last quarter:
 - https://github.com/stellar-registry/ui/pull/57, Verified Build (SEP-55) badge from Stellar Expert data
   - prereq: https://github.com/stellar-registry/indexer/pull/40, Fetch data once-per-registered contract on the indexer side
 
-### D6: Governance Operations UI
+### ⚠️ D6: Governance Operations UI
 
 Description from last quarter:
 
@@ -152,7 +152,7 @@ Description from last quarter:
 
 - https://github.com/stellar-registry/ui/issues/51 —— @pselle to kick off with separate PRs per form.
 
-### D7: Registry Documentation & Education (carried from Q2)
+### ✅ D7: Registry Documentation & Education (carried from Q2)
 
 Description from last quarter:
 
@@ -175,7 +175,7 @@ Q3 stretch goals:
 - https://github.com/stellar-registry/cli/issues/44, video: publishing/releasing using CI workflow
 
 
-### D8: Support named G-addresses
+### ⚠️ D8: Support named G-addresses
 
 Description from last quarter:
 
@@ -189,7 +189,7 @@ Description from last quarter:
 
 Tentative design finalized in issue comments (scroll down); currently unassigned: https://github.com/stellar-registry/cli/issues/51
 
-### D9: Surface emerging Source Verification information
+### ⚠️ D9: Surface emerging Source Verification information
 
 Description from last quarter:
 
@@ -206,7 +206,7 @@ Description from last quarter:
 - Who won the RFP? Do they want us to do anything?
 - A solution is needed —— "If anyone is sitting on reproduced builds with nowhere to publish them, we are glad to host the records and freeze the evidence behind them in the meantime." https://github.com/orgs/stellar/discussions/1945#discussioncomment-18179311
 
-### D10: guide Tansu evolution to support Registry needs
+### ⚠️ D10: guide Tansu evolution to support Registry needs
 
 Description from last quarter:
 
@@ -220,7 +220,7 @@ Description from last quarter:
 
 - @tupui to port https://github.com/stellar-registry/contracts/tree/main/contracts/registry-tansu-manager to `Consulting-Manao/tansu` repo and create documentation for how to use it to set up a Tansu project to manage a smart contract as admin, as noted in Radicle tracking issue https://radicle.network/nodes/radicle.consulting-manao.com/rad%3AzssaAF91kxuquZmZCV2SiK2FNX6s/issues/3111b944792c0b5da9f6c8f88e52cdeebd1a3d82
 
-### D11: Registry GH Workflow to publish Wasms and upgrade contracts
+### ⚠️ D11: Registry GH Workflow to publish Wasms and upgrade contracts
 
 Description from last quarter:
 
@@ -239,7 +239,7 @@ Description from last quarter:
 
 - https://github.com/stellar-registry/oz-combined-wasms/issues/1 (@willemneal assigned; work started Aug 17; designed & built new Smart Account Policy JSON dialect Perch as a consequence)
 
-### D12: UI: Expose full contract version history
+### ✅ D12: UI: Expose full contract version history
 
 Description from last quarter:
 
@@ -259,7 +259,7 @@ Description from last quarter:
 
 Stretch Goal: UI improvements to make "Versions" experience consistent across app: https://github.com/stellar-registry/ui/issues/63
 
-### D13: Documentation consolidation & redesign; potential migration of rgstry.xyz
+### ⚠️ D13: Documentation consolidation & redesign; potential migration of rgstry.xyz
 
 Description from last quarter:
 
@@ -283,7 +283,7 @@ Description from last quarter:
   - @chadoh raised the issue in a thread within [SDF Slack](https://theahaco.slack.com/archives/C04B02ABF37/p1783975268185649?thread_ts=1783975086.044619&cid=C04B02ABF37); no one responded
   - @chadoh to raise again in Stellar Community Call when presenting Registry (see [D7](#d7-registry-documentation--education-carried-from-q2))
 
-### D14: Extend `import_contract!` macro to support SAC and XLM
+### ✅ D14: Extend `import_contract!` macro to support SAC and XLM
 
 Description from last quarter:
 
@@ -299,7 +299,7 @@ Note that `import_asset!` was already available and reasonable as an alternative
 
 - https://github.com/stellar-registry/cli/pull/64
 
-### D15: Verified Build Integration with Stellar Expert
+### ✅ D15: Verified Build Integration with Stellar Expert
 
 This is copied from D6 in Q2, as outlined in the [Q3 Proposal discussion](https://github.com/SCF-Public-Goods-Maintenance/scf-public-goods-maintenance.github.io/pull/117#issuecomment-5125268576). It was not hard-committed in the Tansu vote, but was soft-committed in the linked discussion.
 
