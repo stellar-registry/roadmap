@@ -163,18 +163,16 @@ Description from last quarter:
 #### ✅ Complete
 
 - Stellar Registry Full Walk-Through published to The Aha Company YouTube, https://www.youtube.com/watch?v=xAlWmJOdMSQ, takes the place of originally-planned many-video approach (https://github.com/stellar-registry/cli/issues/46, https://github.com/stellar-registry/cli/issues/47, https://github.com/stellar-registry/cli/issues/48)
+- https://github.com/stellar-scaffold/cli/issues/437, Scaffold Tutorial's Registry docs updated
 
 #### ⚠️ Pending
 
-https://github.com/stellar-registry/cli/issues/50, main tracking issue with many sub-issues:
-
-- https://github.com/stellar-scaffold/cli/issues/437, Scaffold Tutorial's Registry docs updated
 - https://github.com/stellar-registry/cli/issues/34, Present at Stellar Community Call: tentatively scheduled for either Sep 17 or 24
 
-Some sub-issues should always have been marked as Q3 stretch goals:
+Q3 stretch goals:
 
-- https://github.com/stellar-registry/cli/issues/45, video: replace manual oz contract usage & deploy with The Registry Way (Q3 Stretch Goal)
-- https://github.com/stellar-registry/cli/issues/44, video: publishing/releasing using CI workflow (Q3 Stretch Goal)
+- https://github.com/stellar-registry/cli/issues/45, video: replace manual oz contract usage & deploy with The Registry Way
+- https://github.com/stellar-registry/cli/issues/44, video: publishing/releasing using CI workflow
 
 
 ### D8: Support named G-addresses
@@ -239,7 +237,7 @@ Description from last quarter:
 
 #### ⚠️ Pending
 
-- https://github.com/stellar-registry/oz-combined-wasms/issues/1 (@willemneal assigned; work to start Aug 17, ~1w effort???)
+- https://github.com/stellar-registry/oz-combined-wasms/issues/1 (@willemneal assigned; work started Aug 17; designed & built new Smart Account Policy JSON dialect Perch as a consequence)
 
 ### D12: UI: Expose full contract version history
 
@@ -276,13 +274,14 @@ Description from last quarter:
 #### ✅ Complete
 
 - logo & icons: https://github.com/stellar-registry/ui/issues/41
+- docs consolidation: https://github.com/stellar-registry/ui/issues/42
 
 #### ⚠️ Pending
 
-- docs consolidation: https://github.com/stellar-registry/ui/issues/42
 - domain move discussion: no public link. History of discussion:
 
   - @chadoh raised the issue in a thread within [SDF Slack](https://theahaco.slack.com/archives/C04B02ABF37/p1783975268185649?thread_ts=1783975086.044619&cid=C04B02ABF37); no one responded
+  - @chadoh to raise again in Stellar Community Call when presenting Registry (see [D7](#d7-registry-documentation--education-carried-from-q2))
 
 ### D14: Extend `import_contract!` macro to support SAC and XLM
 
