@@ -148,9 +148,19 @@ Description from last quarter:
 >
 > Proof: a governance proposal created from rgstry.xyz, voted on in Tansu, and executed on-chain via `trigger`, with the transaction linked.
 
+#### ✅ Complete
+
+Tracking issue: https://github.com/stellar-registry/ui/issues/51. A new Governance section on rgstry.xyz hosts one form per operation. On testnet, a form builds the on-chain outcome transaction, pins `proposal.md` to IPFS, and creates a Tansu proposal signed with the user's wallet. On mainnet, the form opens a prefilled issue in https://github.com/stellar-registry/gov.
+
+- https://github.com/stellar-registry/ui/pull/67, add contract to root registry (https://github.com/stellar-registry/ui/issues/53)
+- https://github.com/stellar-registry/ui/pull/68, same-origin IPFS pinning route for governance proposals
+- https://github.com/stellar-registry/ui/pull/71, add Wasm to root registry (https://github.com/stellar-registry/ui/issues/52); mainnet issue template https://github.com/stellar-registry/gov/pull/2
+- "Change wasm owner" / "change contract owner" forms dropped (https://github.com/stellar-registry/ui/issues/55, https://github.com/stellar-registry/ui/issues/56): authorship transfer is handled in-contract via `preauthorize_author_transfer` (https://github.com/stellar-registry/contracts/pull/34), so no governance action is needed
+
 #### ⚠️ Pending
 
-- https://github.com/stellar-registry/ui/issues/51 —— @pselle to kick off with separate PRs per form.
+- https://github.com/stellar-registry/ui/pull/81, create a new subregistry (https://github.com/stellar-registry/ui/issues/54); mainnet issue template https://github.com/stellar-registry/gov/pull/3
+- Proof still outstanding: create a proposal from rgstry.xyz, vote it through in Tansu, execute via `trigger`, and link the transaction here
 
 ### ✅ D7: Registry Documentation & Education (carried from Q2)
 
@@ -175,7 +185,7 @@ Q3 stretch goals:
 - https://github.com/stellar-registry/cli/issues/44, video: publishing/releasing using CI workflow
 
 
-### ⚠️ D8: Support named G-addresses
+### ✅ D8: Support named G-addresses
 
 Description from last quarter:
 
@@ -185,9 +195,15 @@ Description from last quarter:
 >
 > Proof: code shipped; address system available, documented, and advertised to the community; more than just Aha addresses added and available.
 
-#### ⚠️ Pending
+#### ✅ Complete
 
-Tentative design finalized in issue comments (scroll down); currently unassigned: https://github.com/stellar-registry/cli/issues/51
+Scope was narrowed during Q3 to contract support; see tracking issue https://github.com/stellar-registry/cli/issues/51.
+
+- https://github.com/stellar-registry/contracts/pull/37, register named G-addresses: new `account` namespace in the registry contract with `register_account` and `fetch_account_id`/`fetch_account_owner`, using the same auth style as `register_contract`
+- https://github.com/stellar-registry/contracts/pull/38, account lifecycle management for named G-address entries
+- M-addresses are out of scope: Soroban's `Address` has no muxed variant, so muxed IDs can't be represented on-chain
+
+Displaying names in the rgstry.xyz UI (e.g. "Deployer" and "Admin" fields), CLI support, documentation and community outreach, and onboarding non-Aha addresses will be proposed as Q4 work.
 
 ### ⚠️ D9: Surface emerging Source Verification information
 
@@ -199,8 +215,15 @@ Description from last quarter:
 >
 > Proof: all SEP-58 fields viewable on rgstry.xyz; verification status of those fields by independent Source Verification services also shown in a way that exposes, rather than flattens, disagreement.
 
+#### ✅ Complete
+
+- https://github.com/stellar-registry/indexer/pull/49, SEP-58 build fields exposed in the indexer's Wasm meta
+- https://github.com/stellar-registry/ui/pull/82, SEP-58 Source Verification section on Wasm detail pages
+
 #### ⚠️ Pending
 
+- https://github.com/stellar-registry/ui/pull/83, same Source Verification section on contract detail pages
+- Verification status from independent Source Verification services is not yet shown (no services publishing yet)
 - We did not receive the grant to work on this RFP.
 - We continue to participate in [ongoing RFP discussions](https://github.com/orgs/stellar/discussions/1945#discussioncomment-17897997).
 - Who won the RFP? Do they want us to do anything?
