@@ -223,7 +223,6 @@ Description from last quarter:
 #### ⚠️ Pending
 
 - https://github.com/stellar-registry/ui/pull/83, same Source Verification section on contract detail pages
-- Verification status from independent Source Verification services is not yet shown (no services publishing yet)
 - We did not receive the grant to work on this RFP.
 - We continue to participate in [ongoing RFP discussions](https://github.com/orgs/stellar/discussions/1945#discussioncomment-17897997).
 - Who won the RFP? Do they want us to do anything?
