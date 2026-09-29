@@ -148,9 +148,19 @@ Description from last quarter:
 >
 > Proof: a governance proposal created from rgstry.xyz, voted on in Tansu, and executed on-chain via `trigger`, with the transaction linked.
 
+#### ✅ Complete
+
+Tracking issue: https://github.com/stellar-registry/ui/issues/51. A new Governance section on rgstry.xyz hosts one form per operation. On testnet, a form builds the on-chain outcome transaction, pins `proposal.md` to IPFS, and creates a Tansu proposal signed with the user's wallet. On mainnet, the form opens a prefilled issue in https://github.com/stellar-registry/gov.
+
+- https://github.com/stellar-registry/ui/pull/67, add contract to root registry (https://github.com/stellar-registry/ui/issues/53)
+- https://github.com/stellar-registry/ui/pull/68, same-origin IPFS pinning route for governance proposals
+- https://github.com/stellar-registry/ui/pull/71, add Wasm to root registry (https://github.com/stellar-registry/ui/issues/52); mainnet issue template https://github.com/stellar-registry/gov/pull/2
+- https://github.com/stellar-registry/ui/pull/81, create a new subregistry (https://github.com/stellar-registry/ui/issues/54); mainnet issue template https://github.com/stellar-registry/gov/pull/3
+- "Change wasm owner" / "change contract owner" forms dropped (https://github.com/stellar-registry/ui/issues/55, https://github.com/stellar-registry/ui/issues/56): Wasm authorship transfer is now handled via `preauthorize_author_transfer` (https://github.com/stellar-registry/contracts/pull/34), but long-term need for this as a governance form has been judged dubious upon further review. (In the short-term, Wasms & Contracts seeded as part of initial Registry rollout need to be transferred to their appropriate teams. Beyond this one-time mass authorship reassignment, there will be no steady-state demand for this governance operation.)
+
 #### ⚠️ Pending
 
-- https://github.com/stellar-registry/ui/issues/51 —— @pselle to kick off with separate PRs per form.
+- Proof still outstanding: create a proposal from rgstry.xyz, vote it through in Tansu, execute via `trigger`, and link the transaction here
 
 ### ✅ D7: Registry Documentation & Education (carried from Q2)
 
@@ -175,7 +185,7 @@ Q3 stretch goals:
 - https://github.com/stellar-registry/cli/issues/44, video: publishing/releasing using CI workflow
 
 
-### ⚠️ D8: Support named G-addresses
+### ✅ D8: Support named G-addresses
 
 Description from last quarter:
 
@@ -185,11 +195,17 @@ Description from last quarter:
 >
 > Proof: code shipped; address system available, documented, and advertised to the community; more than just Aha addresses added and available.
 
-#### ⚠️ Pending
+#### ✅ Complete
 
-Tentative design finalized in issue comments (scroll down); currently unassigned: https://github.com/stellar-registry/cli/issues/51
+Scope was narrowed during Q3 to foundational contract-level support; see tracking issue https://github.com/stellar-registry/cli/issues/51.
 
-### ⚠️ D9: Surface emerging Source Verification information
+- https://github.com/stellar-registry/contracts/pull/37, register named G-addresses: new `account` namespace in the registry contract with `register_account` and `fetch_account_id`/`fetch_account_owner`, using the same auth style as `register_contract`
+- https://github.com/stellar-registry/contracts/pull/38, account lifecycle management for named G-address entries
+- M-addresses are out of scope: Soroban's `Address` has no muxed variant, so muxed IDs can't be represented on-chain
+
+Displaying names in the rgstry.xyz UI (e.g. "Deployer" and "Admin" fields), CLI support, documentation and community outreach, and onboarding non-Aha addresses will be proposed as Q4 work.
+
+### ✅ D9: Surface emerging Source Verification information
 
 Description from last quarter:
 
@@ -199,6 +215,12 @@ Description from last quarter:
 >
 > Proof: all SEP-58 fields viewable on rgstry.xyz; verification status of those fields by independent Source Verification services also shown in a way that exposes, rather than flattens, disagreement.
 
+#### ✅ Complete
+
+- https://github.com/stellar-registry/indexer/pull/49, SEP-58 build fields exposed in the indexer's Wasm meta
+- https://github.com/stellar-registry/ui/pull/82, SEP-58 Source Verification section on Wasm detail pages
+- https://github.com/stellar-registry/ui/pull/83, same Source Verification section on contract detail pages
+
 #### ⚠️ Pending
 
 - We did not receive the grant to work on this RFP.
@@ -206,7 +228,7 @@ Description from last quarter:
 - Who won the RFP? Do they want us to do anything?
 - A solution is needed —— "If anyone is sitting on reproduced builds with nowhere to publish them, we are glad to host the records and freeze the evidence behind them in the meantime." https://github.com/orgs/stellar/discussions/1945#discussioncomment-18179311
 
-### ⚠️ D10: guide Tansu evolution to support Registry needs
+### ✅ D10: guide Tansu evolution to support Registry needs
 
 Description from last quarter:
 
@@ -216,9 +238,15 @@ Description from last quarter:
 >
 > Proof: [Registry Tansu Manager contract](https://github.com/stellar-registry/contracts/tree/main/contracts/registry-tansu-manager) either migrates out of the stellar-registry repository to Tansu, becoming easier to use for all ecosystem projects, or becomes altogether unnecessary.
 
+#### ✅ Complete
+
+- Tansu merged the manager into its own repo: [`841dd84`](https://radicle.network/nodes/radicle.consulting-manao.com/rad:zssaAF91kxuquZmZCV2SiK2FNX6s/commits/841dd84790f3b8f2c8ae4fbf65ca10d5a9adab69), "Add the registry manager to tansu itself", merged to Tansu `main` on 2026-09-02 (Radicle tracking issue https://radicle.network/nodes/radicle.consulting-manao.com/rad%3AzssaAF91kxuquZmZCV2SiK2FNX6s/issues/3111b944792c0b5da9f6c8f88e52cdeebd1a3d82)
+- Tansu's copy builds against the real Tansu contract rather than our `tansu-stub`
+- Documented in Tansu's governance docs: https://github.com/Consulting-Manao/tansu/blob/main/website/docs/developers/governance.mdx#acting-on-other-contracts
+
 #### ⚠️ Pending
 
-- @tupui to port https://github.com/stellar-registry/contracts/tree/main/contracts/registry-tansu-manager to `Consulting-Manao/tansu` repo and create documentation for how to use it to set up a Tansu project to manage a smart contract as admin, as noted in Radicle tracking issue https://radicle.network/nodes/radicle.consulting-manao.com/rad%3AzssaAF91kxuquZmZCV2SiK2FNX6s/issues/3111b944792c0b5da9f6c8f88e52cdeebd1a3d82
+- Remove the now-duplicate `registry-tansu-manager` and `tansu-stub` from stellar-registry/contracts: https://github.com/stellar-registry/contracts/issues/49
 
 ### ⚠️ D11: Registry GH Workflow to publish Wasms and upgrade contracts
 
