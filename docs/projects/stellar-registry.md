@@ -228,7 +228,7 @@ Description from last quarter:
 - Who won the RFP? Do they want us to do anything?
 - A solution is needed —— "If anyone is sitting on reproduced builds with nowhere to publish them, we are glad to host the records and freeze the evidence behind them in the meantime." https://github.com/orgs/stellar/discussions/1945#discussioncomment-18179311
 
-### ⚠️ D10: guide Tansu evolution to support Registry needs
+### ✅ D10: guide Tansu evolution to support Registry needs
 
 Description from last quarter:
 
@@ -238,9 +238,15 @@ Description from last quarter:
 >
 > Proof: [Registry Tansu Manager contract](https://github.com/stellar-registry/contracts/tree/main/contracts/registry-tansu-manager) either migrates out of the stellar-registry repository to Tansu, becoming easier to use for all ecosystem projects, or becomes altogether unnecessary.
 
+#### ✅ Complete
+
+- Tansu merged the manager into its own repo: [`841dd84`](https://radicle.network/nodes/radicle.consulting-manao.com/rad:zssaAF91kxuquZmZCV2SiK2FNX6s/commits/841dd84790f3b8f2c8ae4fbf65ca10d5a9adab69), "Add the registry manager to tansu itself", merged to Tansu `main` on 2026-09-02 (Radicle tracking issue https://radicle.network/nodes/radicle.consulting-manao.com/rad%3AzssaAF91kxuquZmZCV2SiK2FNX6s/issues/3111b944792c0b5da9f6c8f88e52cdeebd1a3d82)
+- Tansu's copy builds against the real Tansu contract rather than our `tansu-stub`
+- Documented in Tansu's governance docs: https://github.com/Consulting-Manao/tansu/blob/main/website/docs/developers/governance.mdx#acting-on-other-contracts
+
 #### ⚠️ Pending
 
-- @tupui to port https://github.com/stellar-registry/contracts/tree/main/contracts/registry-tansu-manager to `Consulting-Manao/tansu` repo and create documentation for how to use it to set up a Tansu project to manage a smart contract as admin, as noted in Radicle tracking issue https://radicle.network/nodes/radicle.consulting-manao.com/rad%3AzssaAF91kxuquZmZCV2SiK2FNX6s/issues/3111b944792c0b5da9f6c8f88e52cdeebd1a3d82
+- Remove the now-duplicate `registry-tansu-manager` and `tansu-stub` from stellar-registry/contracts: https://github.com/stellar-registry/contracts/issues/49
 
 ### ⚠️ D11: Registry GH Workflow to publish Wasms and upgrade contracts
 
