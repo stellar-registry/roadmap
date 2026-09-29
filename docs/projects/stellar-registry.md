@@ -219,10 +219,10 @@ Description from last quarter:
 
 - https://github.com/stellar-registry/indexer/pull/49, SEP-58 build fields exposed in the indexer's Wasm meta
 - https://github.com/stellar-registry/ui/pull/82, SEP-58 Source Verification section on Wasm detail pages
+- https://github.com/stellar-registry/ui/pull/83, same Source Verification section on contract detail pages
 
 #### ⚠️ Pending
 
-- https://github.com/stellar-registry/ui/pull/83, same Source Verification section on contract detail pages
 - We did not receive the grant to work on this RFP.
 - We continue to participate in [ongoing RFP discussions](https://github.com/orgs/stellar/discussions/1945#discussioncomment-17897997).
 - Who won the RFP? Do they want us to do anything?
