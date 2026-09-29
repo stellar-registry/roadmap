@@ -205,7 +205,7 @@ Scope was narrowed during Q3 to contract support; see tracking issue https://git
 
 Displaying names in the rgstry.xyz UI (e.g. "Deployer" and "Admin" fields), CLI support, documentation and community outreach, and onboarding non-Aha addresses will be proposed as Q4 work.
 
-### ⚠️ D9: Surface emerging Source Verification information
+### ✅ D9: Surface emerging Source Verification information
 
 Description from last quarter:
 
