@@ -155,7 +155,7 @@ Tracking issue: https://github.com/stellar-registry/ui/issues/51. A new Governan
 - https://github.com/stellar-registry/ui/pull/67, add contract to root registry (https://github.com/stellar-registry/ui/issues/53)
 - https://github.com/stellar-registry/ui/pull/68, same-origin IPFS pinning route for governance proposals
 - https://github.com/stellar-registry/ui/pull/71, add Wasm to root registry (https://github.com/stellar-registry/ui/issues/52); mainnet issue template https://github.com/stellar-registry/gov/pull/2
-- "Change wasm owner" / "change contract owner" forms dropped (https://github.com/stellar-registry/ui/issues/55, https://github.com/stellar-registry/ui/issues/56): authorship transfer is handled in-contract via `preauthorize_author_transfer` (https://github.com/stellar-registry/contracts/pull/34), so no governance action is needed
+- "Change wasm owner" / "change contract owner" forms dropped (https://github.com/stellar-registry/ui/issues/55, https://github.com/stellar-registry/ui/issues/56): Wasm authorship transfer is now handled via `preauthorize_author_transfer` (https://github.com/stellar-registry/contracts/pull/34), but long-term need for this as a governance form has been judged dubious upon further review. (In the short-term, Wasms & Contracts seeded as part of initial Registry rollout need to be transferred to their appropriate teams. Beyond this one-time mass authorship reassignment, there will be no steady-state demand for this governance operation.)
 
 #### ⚠️ Pending
 
@@ -197,7 +197,7 @@ Description from last quarter:
 
 #### ✅ Complete
 
-Scope was narrowed during Q3 to contract support; see tracking issue https://github.com/stellar-registry/cli/issues/51.
+Scope was narrowed during Q3 to foundational contract-level support; see tracking issue https://github.com/stellar-registry/cli/issues/51.
 
 - https://github.com/stellar-registry/contracts/pull/37, register named G-addresses: new `account` namespace in the registry contract with `register_account` and `fetch_account_id`/`fetch_account_owner`, using the same auth style as `register_contract`
 - https://github.com/stellar-registry/contracts/pull/38, account lifecycle management for named G-address entries
