@@ -161,6 +161,7 @@ Tracking issue: https://github.com/stellar-registry/ui/issues/51. A new Governan
 #### ⚠️ Pending
 
 - Proof still outstanding: create a proposal from rgstry.xyz, vote it through in Tansu, execute via `trigger`, and link the transaction here
+  - Will be provable at 3:09PM NYC 1 Oct by triggering the outcome for https://testnet.tansu.dev/proposal/?id=11&name=stellarregistry 
 
 ### ✅ D7: Registry Documentation & Education (carried from Q2)
 
