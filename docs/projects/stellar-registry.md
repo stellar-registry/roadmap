@@ -178,7 +178,7 @@ Description from last quarter:
 
 #### ⚠️ Pending
 
-- https://github.com/stellar-registry/cli/issues/34, Present at Stellar Community Call: tentatively scheduled for either Sep 17 or 24
+- https://github.com/stellar-registry/cli/issues/34, Present at Stellar Community Call: Kaan aware of intent to present; waiting to be scheduled
 
 Q3 stretch goals:
 
