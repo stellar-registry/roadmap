@@ -264,9 +264,14 @@ Description from last quarter:
 >
 > Proof: new repository available at, say, `stellar-registry/gh-build-workflow`. Documented and tested in production with the Registry wasm itself.
 
+#### ✅ Complete
+
+- https://github.com/stellar-registry/contracts/pull/53 updates Registry's own contract to get auto-published Wasm on new merges to `main`, https://stellar.expert/explorer/testnet/tx/5793597e4fce5cc536d22263d57bd583d06da2d8e4a648e3b268bc29c0a52cbc demonstrates that it works
+- secure on-GitHub keys accomplished via new product Perch, https://github.com/stellar-registry/perch, a "composable policy layer for Soroban smart accounts", which we designed and shipped this quarter in order to achieve this goal
+
 #### ⚠️ Pending
 
-- https://github.com/stellar-registry/oz-combined-wasms/issues/1 (@willemneal assigned; work started Aug 17; designed & built new Smart Account Policy JSON dialect Perch as a consequence)
+- Stretch goal for Q3: https://github.com/stellar-registry/oz-combined-wasms/issues/1, adding new Registry GitHub workflow to our `oz-combined-wasms` repository
 
 ### ✅ D12: UI: Expose full contract version history
 
