@@ -249,7 +249,7 @@ Description from last quarter:
 
 - Remove the now-duplicate `registry-tansu-manager` and `tansu-stub` from stellar-registry/contracts: https://github.com/stellar-registry/contracts/issues/49
 
-### ⚠️ D11: Registry GH Workflow to publish Wasms and upgrade contracts
+### ✅ D11: Registry GH Workflow to publish Wasms and upgrade contracts
 
 Description from last quarter:
 
@@ -293,7 +293,7 @@ Description from last quarter:
 
 Stretch Goal: UI improvements to make "Versions" experience consistent across app: https://github.com/stellar-registry/ui/issues/63
 
-### ⚠️ D13: Documentation consolidation & redesign; potential migration of rgstry.xyz
+### ✅ D13: Documentation consolidation & redesign; potential migration of rgstry.xyz
 
 Description from last quarter:
 
