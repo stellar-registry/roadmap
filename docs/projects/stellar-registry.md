@@ -375,7 +375,52 @@ Extra details from [Q3 Proposal discussion](https://github.com/SCF-Public-Goods-
 
 ## Proposed Q4 Deliverables
 
-...
+### D1: Named G-addresses, from contract to ecosystem (follow-on from Q3 D8)
+
+Q3 shipped named G-address support in the registry contract
+(https://github.com/stellar-registry/contracts/pull/37,
+https://github.com/stellar-registry/contracts/pull/38). Make it usable and adopted.
+
+- Display names in the rgstry.xyz UI wherever an account appears (e.g. "Deployer" and "Admin" fields)
+- CLI support for registering, resolving, and managing named accounts
+- Documentation and community outreach
+- Onboard named addresses beyond The Aha Company's own
+- Explore a SEP for resolving named G-addresses, so wallets and other tools can adopt the same names
+
+Value to ecosystem: human-readable names for accounts, not only contracts, reduce copy-paste mistakes and make on-chain activity legible.
+
+Proof: names shown on rgstry.xyz and resolvable from the CLI; docs published and announced; named addresses registered by at least one team other than Aha; SEP draft or discussion linked.
+
+### D2: Smart account support in the `account` namespace
+
+The `account` namespace shipped in Q3 only accepts classic G-addresses: `register_account` rejects contract addresses with `NotAccountAddress`. Smart wallets such as [Nido](https://github.com/nidohq) (passkey-based) are contract accounts (C-addresses), so their users can't get a name today.
+
+- Accept smart-account contract addresses in `register_account` and the account lifecycle functions, while keeping them distinct from entries in the `contract` namespace
+- Surface smart-account names wherever D1 surfaces G-address names (rgstry.xyz, CLI, docs)
+- Work with Nido to register names for their wallets
+
+Value to ecosystem: one naming system for every kind of Stellar account, so passkey and other smart-wallet users get the same human-readable names as classic accounts.
+
+Proof: registry contract released with smart-account support; at least one Nido wallet registered under a name and resolvable on rgstry.xyz and from the CLI.
+
+### D3: Simpler CLI
+
+Make the Registry CLI's everyday commands match how people think about the registry, rather than the contract's function list.
+
+- `stellar registry invoke`: https://github.com/stellar-registry/cli/issues/63. Invoking a registered contract still means looking up and pasting its contract ID. `stellar registry invoke circle/usdc --network mainnet -- ...` looks up the contract ID in that network's registry, then hands off to `stellar contract invoke`; all other arguments and syntax match `stellar contract invoke`.
+- Fold `publish-hash` and `register-contract` into `publish` and `deploy`: https://github.com/stellar-registry/cli/issues/56. The contract keeps separate `publish_hash` and `register_contract` functions, but the CLI picks the right one from the arguments given. `register` becomes an alias for `deploy`. The removed commands are deprecated first, with a pointer to their replacements.
+
+Value to ecosystem: registry names become usable in everyday CLI work, not only in `import_contract!`, and there are fewer commands to learn.
+
+Proof: CLI release with `invoke` and the consolidated `publish`/`deploy`, documented with an example invoking a mainnet contract by name.
+
+### D4: Simplify `import_contract!` testing
+
+`import_contract!` works well on testnet and mainnet, but local development and unit tests need a registry with the depended-on contracts already registered, which each team has to set up themselves (see https://github.com/stellar-registry/contracts/pull/24 and https://github.com/stellar-registry/cli/pull/64#discussion_r3982801885). Build the workaround from cli#64 into the library: https://github.com/stellar-registry/cli/issues/65
+
+Value to ecosystem: teams adopting `import_contract!` get a working dev and test setup without retracing our steps.
+
+Proof: released `stellar-registry` crate where a contract using `import_contract!` can be unit-tested and run on a local network with no manual registry setup, documented with an example.
 
 ## Metrics loaded from PG Atlas
 
