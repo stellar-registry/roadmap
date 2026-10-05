@@ -416,7 +416,7 @@ Proof: CLI release with `invoke` and the consolidated `publish`/`deploy`, docume
 
 ### D4: Simplify `import_contract!` testing
 
-`import_contract!` works well on testnet and mainnet, but local development and unit tests need a registry with the depended-on contracts already registered, which each team has to set up themselves (see https://github.com/stellar-registry/contracts/pull/24 and https://github.com/stellar-registry/cli/pull/64#discussion_r3982801885). Build the workaround from cli#64 into the library: https://github.com/stellar-registry/cli/issues/65
+`import_contract!` works well on testnet and mainnet, but local development and unit tests need a registry with the depended-on contracts already registered, which each team has to set up themselves (see https://github.com/stellar-registry/contracts/pull/24 and https://github.com/stellar-registry/cli/pull/64#discussion_r3982801885). Build the workaround from stellar-registry/cli#64 into the library: https://github.com/stellar-registry/cli/issues/65
 
 Value to ecosystem: teams adopting `import_contract!` get a working dev and test setup without retracing our steps.
 
