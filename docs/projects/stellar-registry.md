@@ -422,6 +422,17 @@ Value to ecosystem: teams adopting `import_contract!` get a working dev and test
 
 Proof: released `stellar-registry` crate where a contract using `import_contract!` can be unit-tested and run on a local network with no manual registry setup, documented with an example.
 
+### D5: House Security Audits
+
+Registry is an ideal home for security audits, where we can identify specific Wasm versions with an "Audited" checkmark/label when approved addresses from security firms report such Wasm versions as audited.
+
+- Work with Inferara, a security audit firm, to:
+  - add their key to Registry's list of known auditors
+  - provide them a smart contract method that allows them to mark a Wasm hash as audited
+- Expose audited status in Registry API & UI
+- Draft a SEP to standardize this pattern to integrate more easily with other security audit firms in 2027
+- Stretch goal: if security audits reveal problems with deployed contracts, security audit firm needs a way to alert us discretely, and allow us to flag the contract, bypassing public Tansu governance.
+
 ## Metrics loaded from PG Atlas
 
 [![PG Atlas](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.pgatlas.xyz%2Fprojects%2Fdaoip-5%3Ascf%3Aproject%3Astellar_registry&query=%24.activity_status&label=PG+Atlas&color=914CFF)](https://www.pgatlas.xyz/projects/daoip-5%3Ascf%3Aproject%3Astellar_registry)
