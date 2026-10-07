@@ -408,6 +408,7 @@ https://github.com/stellar-registry/contracts/pull/38). Make it usable and adopt
 
 - Display names in the rgstry.xyz UI wherever an account appears (e.g. "Deployer" and "Admin" fields)
 - CLI support for registering, resolving, and managing named accounts
+- Governance form to request named account in root Registry
 - Documentation and community outreach
 - Onboard named addresses beyond The Aha Company's own
 - Explore a SEP for resolving named G-addresses, so wallets and other tools can adopt the same names
