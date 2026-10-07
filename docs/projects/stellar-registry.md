@@ -381,7 +381,7 @@ Q3 saw Registry become a sophisticated product offering huge productivity gains 
 
 We'll also ship the stuff early adopters have already asked for.
 
-### D#: Help Community Projects Use Registry Internally
+### D1: Help Community Projects Use Registry Internally
 
 Work intentsively with at least two key partners to onboard their projects to Registry, specifically focusing on improvements to their toolchains and processes. This deliverable is about getting partenrs to use Registry in their own workflows. Along the way, we will discover Registry gotchas, improving the product to accelerate further rollout.
 
@@ -391,7 +391,7 @@ Possible partners & projects: XOXNO, Reflector (Orbitlens), Stellar Broker (Orbi
 - Registry team authors PRs to integrate Registry into their codebases/workflows
 - Transfer authorship/admin rights of existing Registry Wasms/Contracts/Accounts to them (if any were created while seeding Registry after initial launch)
 
-### D#: Help Community Projects Show Registry Info
+### D2: Help Community Projects Show Registry Info
 
 Registry's names and versions provide much more human-friendly ways to think about Wasms & contracts than the hashes and IDs shown throughout the ecosystem currently. We will work with at least one key project to show Registry's information in their own system. This will help expose Registry to the broader community, accelerating further adoption.
 
@@ -400,7 +400,7 @@ Possible partners & projects: Stellar Expert (Orbitlens)
 - Introductory calls / chats with target teams to co-create integration plans
 - Registry team authors PRs to query Registry data and expose it in product frontend
 
-### D#: Developer outreach & education
+### D3: Developer outreach & education
 
 We will continue to present and teach about Registry at Stellar community events and support other teams who do the same.
 
@@ -408,7 +408,7 @@ We will continue to present and teach about Registry at Stellar community events
 - Hack Meridian
 - [Despega Con Stellar: Barcelona](https://giveth.io/project/despega-con-stellar)
 
-### D#: Named G-addresses, from contract to ecosystem (follow-on from Q3 D8)
+### D4: Named G-addresses, from contract to ecosystem (follow-on from Q3 D8)
 
 Q3 shipped named G-address support in the registry contract
 (https://github.com/stellar-registry/contracts/pull/37,
@@ -425,7 +425,7 @@ Value to ecosystem: human-readable names for accounts, not only contracts, reduc
 
 Proof: names shown on rgstry.xyz and resolvable from the CLI; docs published and announced; named addresses registered by at least one team other than Aha; SEP draft or discussion linked.
 
-### D#: House Security Audits
+### D5: House Security Audits
 
 Registry is an ideal home for security audits, where we can identify specific Wasm versions with an "Audited" checkmark/label when approved addresses from security firms report such Wasm versions as audited.
 
@@ -436,7 +436,7 @@ Registry is an ideal home for security audits, where we can identify specific Wa
 - Draft a SEP to standardize this pattern to integrate more easily with other security audit firms in 2027
 - Stretch goal: if security audits reveal problems with deployed contracts, security audit firm needs a way to alert us discretely, and allow us to flag the contract, bypassing public Tansu governance.
 
-### D#: Smart account support in the `account` namespace
+### D6: Smart account support in the `account` namespace
 
 The `account` namespace shipped in Q3 only accepts classic G-addresses: `register_account` rejects contract addresses with `NotAccountAddress`. Smart wallets such as [Nido](https://github.com/nidohq) (passkey-based) are contract accounts (C-addresses), so their users can't get a name today.
 
@@ -448,7 +448,7 @@ Value to ecosystem: one naming system for every kind of Stellar account, so pass
 
 Proof: registry contract released with smart-account support; at least one Nido wallet registered under a name and resolvable on rgstry.xyz and from the CLI.
 
-### D#: Simpler CLI
+### D7: Simpler CLI
 
 Make the Registry CLI's everyday commands match how people think about the registry, rather than the contract's function list.
 
@@ -459,7 +459,7 @@ Value to ecosystem: registry names become usable in everyday CLI work, not only 
 
 Proof: CLI release with `invoke` and the consolidated `publish`/`deploy`, documented with an example invoking a mainnet contract by name.
 
-### D#: Simplify `import_contract!` testing
+### D8: Simplify `import_contract!` testing
 
 `import_contract!` works well on testnet and mainnet, but local development and unit tests need a registry with the depended-on contracts already registered, which each team has to set up themselves (see https://github.com/stellar-registry/contracts/pull/24 and https://github.com/stellar-registry/cli/pull/64#discussion_r3982801885). Build the workaround from stellar-registry/cli#64 into the library: https://github.com/stellar-registry/cli/issues/65
 
@@ -467,14 +467,14 @@ Value to ecosystem: teams adopting `import_contract!` get a working dev and test
 
 Proof: released `stellar-registry` crate where a contract using `import_contract!` can be unit-tested and run on a local network with no manual registry setup, documented with an example.
 
-### D#: Contract Details UI Revamp
+### D9: Contract Details UI Revamp
 
 The amount of information shown on Contract Details pages has grown, and it's starting to feel cluttered. Let's clean it up and prioritize what's important.
 
 - Tracking issue: https://github.com/stellar-registry/ui/issues/94
 - Stretch goal: all changes to upstream [@theahaco/contract-explorer](https://www.npmjs.com/package/@theahaco/contract-explorer) package, tracked by sub-issue https://github.com/stellar-registry/ui/issues/100
 
-### D#: Fix core `deploy` workflow when using Secure Store
+### D10: Fix core `deploy` workflow when using Secure Store
 
 When following security best practices, keeping secret keys and seed phrases off the file system and instead using macOS Secure Store or a hardware wallet like Ledger, the Registry CLI falls victim to an upstream Stellar CLI bug. 
 
