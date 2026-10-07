@@ -459,6 +459,13 @@ Value to ecosystem: teams adopting `import_contract!` get a working dev and test
 
 Proof: released `stellar-registry` crate where a contract using `import_contract!` can be unit-tested and run on a local network with no manual registry setup, documented with an example.
 
+### D#: Contract Details UI Revamp
+
+The amount of information shown on Contract Details pages has grown, and it's starting to feel cluttered. Let's clean it up and prioritize what's important.
+
+- Tracking issue: https://github.com/stellar-registry/ui/issues/94
+- Stretch goal: all changes to upstream [@theahaco/contract-explorer](https://www.npmjs.com/package/@theahaco/contract-explorer) package, tracked by sub-issue https://github.com/stellar-registry/ui/issues/100
+
 ## Metrics loaded from PG Atlas
 
 [![PG Atlas](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.pgatlas.xyz%2Fprojects%2Fdaoip-5%3Ascf%3Aproject%3Astellar_registry&query=%24.activity_status&label=PG+Atlas&color=914CFF)](https://www.pgatlas.xyz/projects/daoip-5%3Ascf%3Aproject%3Astellar_registry)
