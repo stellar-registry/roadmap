@@ -381,15 +381,24 @@ Q3 saw Registry become a sophisticated product offering huge productivity gains 
 
 We'll also ship the stuff early adopters have already asked for.
 
-### D#: Onboard 2 Community Projects
+### D#: Help Community Projects Use Registry Internally
 
-Work intentsively with key partners to onboard their projects to Registry. Discover Registry gotchas, improving the product to accelerate ongoing rollout. Expose Registry to broader community through these integrations.
+Work intentsively with at least two key partners to onboard their projects to Registry, specifically focusing on improvements to their toolchains and processes. This deliverable is about getting partenrs to use Registry in their own workflows. Along the way, we will discover Registry gotchas, improving the product to accelerate further rollout.
 
 Possible partners & projects: XOXNO, Reflector (Orbitlens), Stellar Broker (Orbitlens), Crossmint (Overcat), Rozo (Shawn), LiFi, Soroswap (Palta Labs / Esteblock).
 
 - Personalized walkthrough/tutorial sessions for their teams
 - Registry team authors PRs to integrate Registry into their codebases/workflows
 - Transfer authorship/admin rights of existing Registry Wasms/Contracts/Accounts to them (if any were created while seeding Registry after initial launch)
+
+### D#: Help Community Projects Show Registry Info
+
+Registry's names and versions provide much more human-friendly ways to think about Wasms & contracts than the hashes and IDs shown throughout the ecosystem currently. We will work with at least two key projects to show Registry's information in their own systems. This will help expose Registry to the broader community, accelerating further adoption.
+
+Possible partners & projects: Stellar Expert (Orbitlens)
+
+- Introductory calls / chats with target teams to co-create integration plans
+- Registry team authors PRs to query Registry data and expose it in product frontend
 
 ### D#: Named G-addresses, from contract to ecosystem (follow-on from Q3 D8)
 
