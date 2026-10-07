@@ -466,6 +466,16 @@ The amount of information shown on Contract Details pages has grown, and it's st
 - Tracking issue: https://github.com/stellar-registry/ui/issues/94
 - Stretch goal: all changes to upstream [@theahaco/contract-explorer](https://www.npmjs.com/package/@theahaco/contract-explorer) package, tracked by sub-issue https://github.com/stellar-registry/ui/issues/100
 
+### D#: Fix core `deploy` workflow when using Secure Store
+
+When following security best practices, keeping secret keys and seed phrases off the file system and instead using macOS Secure Store or a hardware wallet like Ledger, the Registry CLI falls victim to an upstream Stellar CLI bug. 
+
+    [error: Secure Store does not reveal secret key](https://github.com/stellar-registry/cli/issues/14).
+
+Registry CLI is not trying to get the secret key, it's trying to get the public key, but some old parts of Stellar CLI make bad assumptions (like that every key is stored in a local file) and so Registry fails. This makes us look bad, and forces our users into clumsy and potentially insecure workarounds.
+
+We cannot count on the core Stellar CLI team to merge our upstream PRs this quarter, but we can make sure that we send issues and PRs and attempt to fix the upstream problem.
+
 ## Metrics loaded from PG Atlas
 
 [![PG Atlas](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.pgatlas.xyz%2Fprojects%2Fdaoip-5%3Ascf%3Aproject%3Astellar_registry&query=%24.activity_status&label=PG+Atlas&color=914CFF)](https://www.pgatlas.xyz/projects/daoip-5%3Ascf%3Aproject%3Astellar_registry)
