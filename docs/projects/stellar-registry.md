@@ -400,6 +400,14 @@ Possible partners & projects: Stellar Expert (Orbitlens)
 - Introductory calls / chats with target teams to co-create integration plans
 - Registry team authors PRs to query Registry data and expose it in product frontend
 
+### D#: Developer outreach & education
+
+We will continue to present and teach about Registry at Stellar community events and support other teams who do the same.
+
+- Stellar Community Call
+- Hack Meridian
+- [Despega Con Stellar: Barcelona](https://giveth.io/project/despega-con-stellar)
+
 ### D#: Named G-addresses, from contract to ecosystem (follow-on from Q3 D8)
 
 Q3 shipped named G-address support in the registry contract
