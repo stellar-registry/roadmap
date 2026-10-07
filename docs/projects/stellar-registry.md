@@ -417,6 +417,17 @@ Value to ecosystem: human-readable names for accounts, not only contracts, reduc
 
 Proof: names shown on rgstry.xyz and resolvable from the CLI; docs published and announced; named addresses registered by at least one team other than Aha; SEP draft or discussion linked.
 
+### D#: House Security Audits
+
+Registry is an ideal home for security audits, where we can identify specific Wasm versions with an "Audited" checkmark/label when approved addresses from security firms report such Wasm versions as audited.
+
+- Work with Inferara, a security audit firm, to:
+  - add their key to Registry's list of known auditors
+  - provide them a smart contract method that allows them to mark a Wasm hash as audited
+- Expose audited status in Registry API & UI
+- Draft a SEP to standardize this pattern to integrate more easily with other security audit firms in 2027
+- Stretch goal: if security audits reveal problems with deployed contracts, security audit firm needs a way to alert us discretely, and allow us to flag the contract, bypassing public Tansu governance.
+
 ### D#: Smart account support in the `account` namespace
 
 The `account` namespace shipped in Q3 only accepts classic G-addresses: `register_account` rejects contract addresses with `NotAccountAddress`. Smart wallets such as [Nido](https://github.com/nidohq) (passkey-based) are contract accounts (C-addresses), so their users can't get a name today.
@@ -447,17 +458,6 @@ Proof: CLI release with `invoke` and the consolidated `publish`/`deploy`, docume
 Value to ecosystem: teams adopting `import_contract!` get a working dev and test setup without retracing our steps.
 
 Proof: released `stellar-registry` crate where a contract using `import_contract!` can be unit-tested and run on a local network with no manual registry setup, documented with an example.
-
-### D#: House Security Audits
-
-Registry is an ideal home for security audits, where we can identify specific Wasm versions with an "Audited" checkmark/label when approved addresses from security firms report such Wasm versions as audited.
-
-- Work with Inferara, a security audit firm, to:
-  - add their key to Registry's list of known auditors
-  - provide them a smart contract method that allows them to mark a Wasm hash as audited
-- Expose audited status in Registry API & UI
-- Draft a SEP to standardize this pattern to integrate more easily with other security audit firms in 2027
-- Stretch goal: if security audits reveal problems with deployed contracts, security audit firm needs a way to alert us discretely, and allow us to flag the contract, bypassing public Tansu governance.
 
 ## Metrics loaded from PG Atlas
 
