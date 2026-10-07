@@ -407,6 +407,7 @@ We will continue to present and teach about Registry at Stellar community events
 - Stellar Community Call, https://github.com/stellar-registry/cli/issues/34
 - Hack Meridian
 - [Despega Con Stellar: Barcelona](https://giveth.io/project/despega-con-stellar)
+- Host monthly Office Hours to teach people about Registry or answer their questions
 
 ### D4: Named G-addresses, from contract to ecosystem (follow-on from Q3 D8)
 
