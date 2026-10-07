@@ -404,7 +404,7 @@ Possible partners & projects: Stellar Expert (Orbitlens)
 
 We will continue to present and teach about Registry at Stellar community events and support other teams who do the same.
 
-- Stellar Community Call
+- Stellar Community Call, https://github.com/stellar-registry/cli/issues/34
 - Hack Meridian
 - [Despega Con Stellar: Barcelona](https://giveth.io/project/despega-con-stellar)
 
