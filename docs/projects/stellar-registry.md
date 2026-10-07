@@ -375,7 +375,23 @@ Extra details from [Q3 Proposal discussion](https://github.com/SCF-Public-Goods-
 
 ## Proposed Q4 Deliverables
 
-### D1: Named G-addresses, from contract to ecosystem (follow-on from Q3 D8)
+Overarching Q4 story: Registry is ready, now drive adoption.
+
+Q3 saw Registry become a sophisticated product offering huge productivity gains to any team that adopts it. And: the more everyone adopts it, the more everyone benefits. In Q4 we accelerate those gains.
+
+We'll also ship the stuff early adopters have already asked for.
+
+### D#: Onboard 2 Community Projects
+
+Work intentsively with key partners to onboard their projects to Registry. Discover Registry gotchas, improving the product to accelerate ongoing rollout. Expose Registry to broader community through these integrations.
+
+Possible partners & projects: XOXNO, Reflector (Orbitlens), Stellar Broker (Orbitlens), Crossmint (Overcat), Rozo (Shawn), LiFi, Soroswap (Palta Labs / Esteblock).
+
+- Personalized walkthrough/tutorial sessions for their teams
+- Registry team authors PRs to integrate Registry into their codebases/workflows
+- Transfer authorship/admin rights of existing Registry Wasms/Contracts/Accounts to them (if any were created while seeding Registry after initial launch)
+
+### D#: Named G-addresses, from contract to ecosystem (follow-on from Q3 D8)
 
 Q3 shipped named G-address support in the registry contract
 (https://github.com/stellar-registry/contracts/pull/37,
@@ -391,7 +407,7 @@ Value to ecosystem: human-readable names for accounts, not only contracts, reduc
 
 Proof: names shown on rgstry.xyz and resolvable from the CLI; docs published and announced; named addresses registered by at least one team other than Aha; SEP draft or discussion linked.
 
-### D2: Smart account support in the `account` namespace
+### D#: Smart account support in the `account` namespace
 
 The `account` namespace shipped in Q3 only accepts classic G-addresses: `register_account` rejects contract addresses with `NotAccountAddress`. Smart wallets such as [Nido](https://github.com/nidohq) (passkey-based) are contract accounts (C-addresses), so their users can't get a name today.
 
@@ -403,7 +419,7 @@ Value to ecosystem: one naming system for every kind of Stellar account, so pass
 
 Proof: registry contract released with smart-account support; at least one Nido wallet registered under a name and resolvable on rgstry.xyz and from the CLI.
 
-### D3: Simpler CLI
+### D#: Simpler CLI
 
 Make the Registry CLI's everyday commands match how people think about the registry, rather than the contract's function list.
 
@@ -414,7 +430,7 @@ Value to ecosystem: registry names become usable in everyday CLI work, not only 
 
 Proof: CLI release with `invoke` and the consolidated `publish`/`deploy`, documented with an example invoking a mainnet contract by name.
 
-### D4: Simplify `import_contract!` testing
+### D#: Simplify `import_contract!` testing
 
 `import_contract!` works well on testnet and mainnet, but local development and unit tests need a registry with the depended-on contracts already registered, which each team has to set up themselves (see https://github.com/stellar-registry/contracts/pull/24 and https://github.com/stellar-registry/cli/pull/64#discussion_r3982801885). Build the workaround from stellar-registry/cli#64 into the library: https://github.com/stellar-registry/cli/issues/65
 
@@ -422,7 +438,7 @@ Value to ecosystem: teams adopting `import_contract!` get a working dev and test
 
 Proof: released `stellar-registry` crate where a contract using `import_contract!` can be unit-tested and run on a local network with no manual registry setup, documented with an example.
 
-### D5: House Security Audits
+### D#: House Security Audits
 
 Registry is an ideal home for security audits, where we can identify specific Wasm versions with an "Audited" checkmark/label when approved addresses from security firms report such Wasm versions as audited.
 
