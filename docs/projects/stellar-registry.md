@@ -393,7 +393,7 @@ Possible partners & projects: XOXNO, Reflector (Orbitlens), Stellar Broker (Orbi
 
 ### D#: Help Community Projects Show Registry Info
 
-Registry's names and versions provide much more human-friendly ways to think about Wasms & contracts than the hashes and IDs shown throughout the ecosystem currently. We will work with at least two key projects to show Registry's information in their own systems. This will help expose Registry to the broader community, accelerating further adoption.
+Registry's names and versions provide much more human-friendly ways to think about Wasms & contracts than the hashes and IDs shown throughout the ecosystem currently. We will work with at least one key project to show Registry's information in their own system. This will help expose Registry to the broader community, accelerating further adoption.
 
 Possible partners & projects: Stellar Expert (Orbitlens)
 
