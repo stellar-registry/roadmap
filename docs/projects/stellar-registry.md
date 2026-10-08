@@ -371,119 +371,141 @@ Extra details from [Q3 Proposal discussion](https://github.com/SCF-Public-Goods-
 
 ## Proposed Q4 Impact
 
-...
-
-## Proposed Q4 Deliverables
-
 Overarching Q4 story: Registry is ready, now drive adoption.
 
 Q3 saw Registry become a sophisticated product offering huge productivity gains to any team that adopts it. And: the more everyone adopts it, the more everyone benefits. In Q4 we accelerate those gains.
 
 We'll also ship the stuff early adopters have already asked for.
 
+## Proposed Q4 Deliverables
+
 ### D1: Help Community Projects Use Registry Internally
 
-Work intentsively with at least two key partners to onboard their projects to Registry, specifically focusing on improvements to their toolchains and processes. This deliverable is about getting partenrs to use Registry in their own workflows. Along the way, we will discover Registry gotchas, improving the product to accelerate further rollout.
+Work intensively with at least two key partners to onboard their projects to Registry, specifically focusing on improvements to their toolchains and processes. This deliverable is about getting partners to use Registry in their own workflows. Along the way, we will discover Registry gotchas, improving the product to accelerate further rollout.
 
 Possible partners & projects: XOXNO, Reflector (Orbitlens), Stellar Broker (Orbitlens), Crossmint (Overcat), Rozo (Shawn), LiFi, Soroswap (Palta Labs / Esteblock).
 
-- Personalized walkthrough/tutorial sessions for their teams
-- Registry team authors PRs to integrate Registry into their codebases/workflows
-- Transfer authorship/admin rights of existing Registry Wasms/Contracts/Accounts to them (if any were created while seeding Registry after initial launch)
+Value to ecosystem: more teams are saving time by using Registry and their contracts and Wasms are easier to find & use for the rest of the ecosystem.
+
+Issue: https://github.com/stellar-registry/ui/issues/102
+
+Proof:
+
+- Merged PRs to integrate Registry into their codebases/workflows
+- Partner teams' contracts & Wasms exist on Registry and are owned by their teams' accounts
 
 ### D2: Help Community Projects Show Registry Info
 
-Registry's names and versions provide much more human-friendly ways to think about Wasms & contracts than the hashes and IDs shown throughout the ecosystem currently. We will work with at least one key project to show Registry's information in their own system. This will help expose Registry to the broader community, accelerating further adoption.
+Starting with Stellar.Expert, we'll help community partners display Registry info, turning opaque hashes and IDs into human-friendly names.
 
-Possible partners & projects: Stellar Expert (Orbitlens)
+Value to ecosystem: in the systems that people are already relying on, contracts and Wasms are identified by human-friendly names and versions, rather than opaque hashes and IDs.
 
-- Introductory calls / chats with target teams to co-create integration plans
-- Registry team authors PRs to query Registry data and expose it in product frontend
+Issues:
+
+- stellar-registry/indexer#TODO: Update Stellar.Expert to show Registry names/versions in place of Wasm hashes and contract IDs, when available
+
+Proof:
+
+- Linked issue closed with implementing PR
+- Registry info displays on Stellar.Expert when available
 
 ### D3: Developer outreach & education
 
 We will continue to present and teach about Registry at Stellar community events and support other teams who do the same.
 
-- Stellar Community Call, https://github.com/stellar-registry/cli/issues/34
-- Hack Meridian
-- [Despega Con Stellar: Barcelona](https://giveth.io/project/despega-con-stellar)
-- Host monthly Office Hours to teach people about Registry or answer their questions
+Value to ecosystem: help people learn about and onboard to Registry.
 
-### D4: Named G-addresses, from contract to ecosystem (follow-on from Q3 D8)
+Issues:
 
-Q3 shipped named G-address support in the registry contract
-(https://github.com/stellar-registry/contracts/pull/37,
-https://github.com/stellar-registry/contracts/pull/38). Make it usable and adopted.
+- https://github.com/stellar-registry/cli/issues/34, Stellar Community Call
+- https://github.com/stellar-registry/ui#TODO: Present Registry at HackMeridian
+- https://github.com/stellar-registry/ui#TODO: Host monthly Office Hours to teach people about Registry or answer their questions
 
-- Display names in the rgstry.xyz UI wherever an account appears (e.g. "Deployer" and "Admin" fields)
-- CLI support for registering, resolving, and managing named accounts
-- Governance form to request named account in root Registry
-- Documentation and community outreach
-- Onboard named addresses beyond The Aha Company's own
-- Explore a SEP for resolving named G-addresses, so wallets and other tools can adopt the same names
+Proof: links to recorded videos or event links
 
-Value to ecosystem: human-readable names for accounts, not only contracts, reduce copy-paste mistakes and make on-chain activity legible.
-
-Proof: names shown on rgstry.xyz and resolvable from the CLI; docs published and announced; named addresses registered by at least one team other than Aha; SEP draft or discussion linked.
-
-### D5: House Security Audits
-
-Registry is an ideal home for security audits, where we can identify specific Wasm versions with an "Audited" checkmark/label when approved addresses from security firms report such Wasm versions as audited.
-
-- Work with Inferara, a security audit firm, to:
-  - add their key to Registry's list of known auditors
-  - provide them a smart contract method that allows them to mark a Wasm hash as audited
-- Expose audited status in Registry API & UI
-- Draft a SEP to standardize this pattern to integrate more easily with other security audit firms in 2027
-- Stretch goal: if security audits reveal problems with deployed contracts, security audit firm needs a way to alert us discretely, and allow us to flag the contract, bypassing public Tansu governance.
-
-### D6: Smart account support in the `account` namespace
+### D4: Smart account support in the `account` namespace
 
 The `account` namespace shipped in Q3 only accepts classic G-addresses: `register_account` rejects contract addresses with `NotAccountAddress`. Smart wallets such as [Nido](https://github.com/nidohq) (passkey-based) are contract accounts (C-addresses), so their users can't get a name today.
 
-- Accept smart-account contract addresses in `register_account` and the account lifecycle functions, while keeping them distinct from entries in the `contract` namespace
-- Surface smart-account names wherever D1 surfaces G-address names (rgstry.xyz, CLI, docs)
-- Work with Nido to register names for their wallets
+Issues:
+
+- stellar-registry/contracts#TODO: Accept smart-account contract addresses in `register_account` and the account lifecycle functions, while keeping them distinct from entries in the `contract` namespace
+- nidohq/nido#TODO: Add wallet names to Stellar Registry
 
 Value to ecosystem: one naming system for every kind of Stellar account, so passkey and other smart-wallet users get the same human-readable names as classic accounts.
 
 Proof: registry contract released with smart-account support; at least one Nido wallet registered under a name and resolvable on rgstry.xyz and from the CLI.
 
-### D7: Simpler CLI
+### D5: Named G-addresses, from contract to ecosystem (follow-on from Q3 D8)
 
-Make the Registry CLI's everyday commands match how people think about the registry, rather than the contract's function list.
+Q3 shipped named G-address support in the registry contract (stellar-registry/contracts#37, stellar-registry/contracts#38). Make it usable and adopted.
 
-- `stellar registry invoke`: https://github.com/stellar-registry/cli/issues/63. Invoking a registered contract still means looking up and pasting its contract ID. `stellar registry invoke circle/usdc --network mainnet -- ...` looks up the contract ID in that network's registry, then hands off to `stellar contract invoke`; all other arguments and syntax match `stellar contract invoke`.
-- Fold `publish-hash` and `register-contract` into `publish` and `deploy`: https://github.com/stellar-registry/cli/issues/56. The contract keeps separate `publish_hash` and `register_contract` functions, but the CLI picks the right one from the arguments given. `register` becomes an alias for `deploy`. The removed commands are deprecated first, with a pointer to their replacements.
+This follows D4 intentionally: either style of named account (whether backed by a G-address or a smart account C-address) must be supported in all situations.
 
-Value to ecosystem: registry names become usable in everyday CLI work, not only in `import_contract!`, and there are fewer commands to learn.
+Issues:
 
-Proof: CLI release with `invoke` and the consolidated `publish`/`deploy`, documented with an example invoking a mainnet contract by name.
+- stellar-registry/ui#TODO: Display account names anywhere accounts appear (e.g. "Deployer" and "Admin" fields)
+- stellar-registry/ui#TODO: Governance form to request named account in root Registry
+- stellar-registry/cli#TODO: register, resolve, and manage named (G- or C-) accounts
+- stellar-scaffold/cli#TODO: Document Registry's named (G- and C-) account support
+- stellar-registry/ui#TODO: Work with partner network to register names for the (G- and C-) accounts listed in their Wasms & contracts
+- stellar-registry/indexer#TODO: Show Registry's (G- & C-) account names in Stellar.Expert
+- stellar-registry/contracts#TODO: Create a SEP for resolving named G-addresses, so wallets and other tools can adopt the same names
 
-### D8: Simplify `import_contract!` testing
+Value to ecosystem: human-readable names for accounts, not only contracts & Wasms; reduce copy-paste mistakes and make on-chain activity legible.
 
-`import_contract!` works well on testnet and mainnet, but local development and unit tests need a registry with the depended-on contracts already registered, which each team has to set up themselves (see https://github.com/stellar-registry/contracts/pull/24 and https://github.com/stellar-registry/cli/pull/64#discussion_r3982801885). Build the workaround from stellar-registry/cli#64 into the library: https://github.com/stellar-registry/cli/issues/65
+Proof: names shown on rgstry.xyz and resolvable from the CLI; docs published and announced; named addresses registered by at least one team other than Aha; SEP draft or discussion linked.
+
+### D6: Simplify `import_contract!` testing
+
+`import_contract!` works well on testnet and mainnet, but local development and unit tests need a registry with the depended-on contracts already registered, which each team has to set up themselves. Build the workaround from stellar-registry/cli#64 into the library
+
+Issue: stellar-registry/cli#65
 
 Value to ecosystem: teams adopting `import_contract!` get a working dev and test setup without retracing our steps.
 
-Proof: released `stellar-registry` crate where a contract using `import_contract!` can be unit-tested and run on a local network with no manual registry setup, documented with an example.
+Proof: linked issue address with a PR using a newly-cut release of `stellar-registry` crate
 
-### D9: Contract Details UI Revamp
+### D7: Contract Details UI Revamp
 
 The amount of information shown on Contract Details pages has grown, and it's starting to feel cluttered. Let's clean it up and prioritize what's important.
 
-- Tracking issue: https://github.com/stellar-registry/ui/issues/94
-- Stretch goal: all changes to upstream [@theahaco/contract-explorer](https://www.npmjs.com/package/@theahaco/contract-explorer) package, tracked by sub-issue https://github.com/stellar-registry/ui/issues/100
+- Issue: stellar-registry/ui#94
 
-### D10: Fix core `deploy` workflow when using Secure Store
+### D8: Fix core `deploy` workflow when using Secure Store
 
 When following security best practices, keeping secret keys and seed phrases off the file system and instead using macOS Secure Store or a hardware wallet like Ledger, the Registry CLI falls victim to an upstream Stellar CLI bug. 
 
-    [error: Secure Store does not reveal secret key](https://github.com/stellar-registry/cli/issues/14).
+Issue: stellar-registry/cli#14
 
-Registry CLI is not trying to get the secret key, it's trying to get the public key, but some old parts of Stellar CLI make bad assumptions (like that every key is stored in a local file) and so Registry fails. This makes us look bad, and forces our users into clumsy and potentially insecure workarounds.
+Value to ecosystem: No longer force users into clumsy and potentially insecure workarounds for core Registry CLI workflows.
 
-We cannot count on the core Stellar CLI team to merge our upstream PRs this quarter, but we can make sure that we send issues and PRs and attempt to fix the upstream problem.
+Proof: Issues and PRs _created_ in https://github.com/stellar/stellar-cli, and communications sent to Stellar CLI via our shared Slack channel to attempt to secure a review of these issues & PRs.
+
+### D9: `stellar-registry/actions` maturation & adoption
+
+Q3's D11 saw us add automatic Wasm publishing to Registry via GitHub Workflow, added to Registry's own Wasm in stellar-registry/contracts#53. In Q4 we add contract upgrades to the core actions workflow, add more discerning Mainnet publish pathway, and adopt these workflows in all Aha-maintained projects. Along the way, we turn any rough edges or tooling/documentation gaps into new issues or PRs.
+
+Issues:
+
+- stellar-registry/actions#TODO: add "Contract `upgrade`" workflow step
+- stellar-registry/actions#TODO: add human-initiated "Mainnet publish/deploy" workflow step
+- stellar-scaffold/ui#TODO: adopt stellar-registry/actions for Wasm publish & contract upgrade
+- stellar-registry/oz-combined-wasms#TODO: adopt stellar-registry/actions for Wasm publish & contract upgrade
+- Consulting-Manao/tansu#TODO: adopt stellar-registry/actions for Wasm publish & contract upgrade
+- nidohq/nido#TODO: adopt stellar-registry/actions for Wasm publish & contract upgrade
+- stellar-registry/perch#TODO: adopt stellar-registry/actions for Wasm publish & contract upgrade
+- Moonlight-Protocol/soroban-core#TODO: adopt stellar-registry/actions for Wasm publish & contract upgrade
+
+Value to ecosystem: maturation of `stellar-registry/actions` ahead of Q1 rollout to partner teams and broader ecosystem; simplified & automatic best-practices publishing of Wasms with associated contract upgrades for all projects that adopt the workflow.
+
+Proof:
+
+- Issues closed with implementing PRs
+- Successful workflow runs on linked Aha repos
+
+
+
 
 ## Metrics loaded from PG Atlas
 
