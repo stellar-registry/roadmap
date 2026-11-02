@@ -860,11 +860,11 @@ Description:
 > - Merged PRs to integrate Registry into their codebases/workflows
 > - Partner teams' contracts & Wasms exist on Registry and are owned by their teams' accounts
 
-**⏳ Pending:**
+**⚠️ Pending:**
 
 - https://github.com/stellar-registry/ui/issues/102 (tracking issue): no partner integration PRs yet
 
-#### ⏳ D2: Help Community Projects Show Registry Info
+#### 🟩 D2: Help Community Projects Show Registry Info
 
 Description:
 
@@ -883,12 +883,15 @@ Description:
 > - Linked issue closed with implementing PR
 > - Registry info displays on Stellar.Expert when available
 
-**⏳ Pending:**
+**✅ Complete:**
 
-- https://github.com/stellar-registry/indexer/issues/50: not started
-- prereqs on our side that make bulk consumption practical for partners:
-  - https://github.com/stellar-registry/indexer/pull/55, `/v1/changes` feed for bulk sync
-  - https://github.com/stellar-registry/indexer/pull/52, API keys that bypass the `/v1` rate limit
+- https://github.com/stellar-registry/indexer/pull/52, API keys that let trusted consumers
+  (Stellar.Expert first) bypass the `/v1` rate limit
+- https://github.com/stellar-registry/indexer/pull/55, `/v1/changes` feed for bulk sync
+
+**⚠️ Pending:**
+
+- https://github.com/stellar-registry/indexer/issues/50, Registry info displayed on Stellar.Expert
 
 #### ⏳ D3: Developer outreach & education
 
@@ -907,7 +910,7 @@ Description:
 >
 > Proof: links to recorded videos or event links
 
-**⏳ Pending:**
+**⚠️ Pending:**
 
 - https://github.com/stellar-registry/cli/issues/34, present Registry at Stellar Community Call
 - https://github.com/stellar-registry/ui/issues/103, present Registry at HackMeridian
@@ -941,7 +944,7 @@ Description:
 - Released in
   [registry-v0.7.0](https://github.com/stellar-registry/contracts/releases/tag/registry-v0.7.0)
 
-**⏳ Pending:**
+**⚠️ Pending:**
 
 - https://github.com/nidohq/nido/issues/238, register a Nido wallet under a name, resolvable on
   rgstry.xyz and from the CLI
@@ -982,9 +985,8 @@ Description:
   resolve, and manage named G- and C-accounts, released in
   [stellar-registry-cli v0.2.0](https://github.com/stellar-registry/cli/releases/tag/stellar-registry-cli-v0.2.0)
 - https://github.com/stellar-scaffold/cli/pull/641, account names added to the Registry guide
-  (https://github.com/stellar-scaffold/cli/issues/613)
 
-**⏳ Pending:**
+**⚠️ Pending:**
 
 - https://github.com/stellar-registry/indexer/pull/56 (open), index named accounts and pending
   preauthorizations; prereq for UI display and Stellar.Expert
@@ -993,9 +995,10 @@ Description:
 - https://github.com/stellar-registry/ui/issues/107, partner teams register names for their accounts
 - https://github.com/stellar-registry/indexer/issues/51, account names in Stellar.Expert
 - https://github.com/stellar-registry/contracts/issues/61, SEP for resolving named G-addresses
-- https://github.com/stellar-scaffold/cli/issues/613 still open; close once the docs are announced
+- https://github.com/stellar-scaffold/cli/issues/613, document named account support: guide merged
+  (above); issue still open
 
-#### 🟩 D6: Simplify `import_contract!` testing
+#### ⏳ D6: Simplify `import_contract!` testing
 
 Description:
 
@@ -1012,7 +1015,7 @@ Description:
 >
 > Proof: linked issue address with a PR using a newly-cut release of `stellar-registry` crate
 
-**⏳ In progress:**
+**⚠️ Pending:**
 
 - https://github.com/stellar-registry/cli/issues/65 (tracking issue)
   - https://github.com/stellar-registry/cli/pull/77 (open), `register_import!` for testing
@@ -1032,7 +1035,7 @@ Description:
 >
 > - stellar-registry/ui#94
 
-**⏳ Pending:**
+**⚠️ Pending:**
 
 - https://github.com/stellar-registry/ui/issues/94: not started
 
@@ -1054,7 +1057,7 @@ Description:
 > Proof: Issues and PRs _created_ in https://github.com/stellar/stellar-cli, and communications sent
 > to Stellar CLI via our shared Slack channel to attempt to secure a review of these issues & PRs.
 
-**⏳ Pending:**
+**⚠️ Pending:**
 
 - https://github.com/stellar-registry/cli/issues/14: no upstream issues or PRs created yet in
   https://github.com/stellar/stellar-cli
@@ -1091,8 +1094,8 @@ Description:
 
 **✅ Complete:**
 
-- [actions v2.0.0](https://github.com/stellar-registry/actions/releases/tag/v2.0.0): semver releases
-  with SHA-plus-tag pinning (https://github.com/stellar-registry/actions/pull/21)
+- [actions v2.0.0](https://github.com/stellar-registry/actions/releases/tag/v2.0.0): first semver
+  releases
   - https://github.com/stellar-registry/actions/pull/18, pin contract-release toolchain; optional
     environment for `registry-publish`
   - https://github.com/stellar-registry/actions/pull/20, refresh `Cargo.lock` after version bumps
@@ -1101,10 +1104,11 @@ Description:
   - https://github.com/stellar-registry/actions/pull/23, deploy even when the publish was already
     done
 - Adopted in Registry's own contracts: https://github.com/stellar-registry/contracts/pull/72
-- Adopted in Perch: https://github.com/stellar-registry/perch/pull/128 (Wasm publish; contract
-  upgrade still pending, https://github.com/stellar-registry/perch/issues/113)
+- Partially adopted in Perch: https://github.com/stellar-registry/perch/pull/128 uses the release and
+  publish workflows, pinned to a pre-v2.0.0 commit on `main`; repin to a release and contract upgrade
+  still pending (https://github.com/stellar-registry/perch/issues/113)
 
-**⏳ Pending:**
+**⚠️ Pending:**
 
 - https://github.com/stellar-registry/actions/issues/16, contract `upgrade` workflow step
 - https://github.com/stellar-registry/actions/issues/17, human-initiated mainnet publish/deploy step
