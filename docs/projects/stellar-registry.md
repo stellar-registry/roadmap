@@ -948,6 +948,9 @@ Description:
 
 - https://github.com/nidohq/nido/issues/238, register a Nido wallet under a name, resolvable on
   rgstry.xyz and from the CLI
+- https://github.com/stellar-registry/cli/issues/92, let smart accounts sign the `account`
+  commands; blocked upstream on https://github.com/stellar/stellar-cli/issues/2762, with a fix in
+  https://github.com/stellar/stellar-cli/pull/2881 (open)
 
 #### 🟩 D5: Named G-addresses, from contract to ecosystem (follow-on from Q3 D8)
 
@@ -985,11 +988,18 @@ Description:
   resolve, and manage named G- and C-accounts, released in
   [stellar-registry-cli v0.2.0](https://github.com/stellar-registry/cli/releases/tag/stellar-registry-cli-v0.2.0)
 - https://github.com/stellar-scaffold/cli/pull/641, account names added to the Registry guide
+- https://github.com/stellar-registry/indexer/pull/56, index named accounts and pending
+  preauthorizations, with `/v1/accounts` endpoints including lookup by address; pipeline applied on
+  testnet and verified with account events on `unverified`
+- Testnet root and `unverified` registries upgraded to v0.8.0
 
 **⚠️ Pending:**
 
-- https://github.com/stellar-registry/indexer/pull/56 (open), index named accounts and pending
-  preauthorizations; prereq for UI display and Stellar.Expert
+- Mainnet: the root registry has no account functions yet (needs the v0.8.0 upgrade), and the
+  indexer's account pipeline and API are not yet deployed there
+- https://github.com/stellar-registry/indexer/issues/59, API endpoint for pending
+  preauthorizations; prereq for the governance form in
+  https://github.com/stellar-registry/ui/issues/106
 - https://github.com/stellar-registry/ui/issues/105, display account names wherever accounts appear
 - https://github.com/stellar-registry/ui/issues/106, governance form to request a named account
 - https://github.com/stellar-registry/ui/issues/107, partner teams register names for their accounts
