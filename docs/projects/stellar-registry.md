@@ -836,8 +836,6 @@ Extra details from
 
 ### 2026 Q4
 
-Work in progress: status as of November 2, 2026. Pending items will be updated as they land.
-
 #### ⏳ D1: Help Community Projects Use Registry Internally
 
 Description from last quarter:
