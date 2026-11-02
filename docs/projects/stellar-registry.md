@@ -838,7 +838,7 @@ Extra details from
 
 #### ⏳ D1: Help Community Projects Use Registry Internally
 
-Description from last quarter:
+Description:
 
 > Work intensively with at least two key partners to onboard their projects to Registry, specifically
 > focusing on improvements to their toolchains and processes. This deliverable is about getting
@@ -866,7 +866,7 @@ Description from last quarter:
 
 #### ⏳ D2: Help Community Projects Show Registry Info
 
-Description from last quarter:
+Description:
 
 > Starting with Stellar.Expert, we'll help community partners display Registry info, turning opaque
 > hashes and IDs into human-friendly names.
@@ -892,7 +892,7 @@ Description from last quarter:
 
 #### ⏳ D3: Developer outreach & education
 
-Description from last quarter:
+Description:
 
 > We will continue to present and teach about Registry at Stellar community events and support other
 > teams who do the same.
@@ -915,7 +915,7 @@ Description from last quarter:
 
 #### 🟩 D4: Smart account support in the `account` namespace
 
-Description from last quarter:
+Description:
 
 > The `account` namespace shipped in Q3 only accepts classic G-addresses: `register_account` rejects
 > contract addresses with `NotAccountAddress`. Smart wallets such as
@@ -948,7 +948,7 @@ Description from last quarter:
 
 #### 🟩 D5: Named G-addresses, from contract to ecosystem (follow-on from Q3 D8)
 
-Description from last quarter:
+Description:
 
 > Q3 shipped named G-address support in the registry contract (stellar-registry/contracts#37,
 > stellar-registry/contracts#38). Make it usable and adopted.
@@ -997,7 +997,7 @@ Description from last quarter:
 
 #### 🟩 D6: Simplify `import_contract!` testing
 
-Description from last quarter:
+Description:
 
 > `import_contract!` works well on testnet and mainnet, but local development and unit tests need a
 > registry with the depended-on contracts already registered, which each team has to set up
@@ -1023,7 +1023,7 @@ Description from last quarter:
 
 #### ⏳ D7: Contract Details UI Revamp
 
-Description from last quarter:
+Description:
 
 > The amount of information shown on Contract Details pages has grown, and it's starting to feel
 > cluttered. Let's clean it up and prioritize what's important.
@@ -1038,7 +1038,7 @@ Description from last quarter:
 
 #### ⏳ D8: Fix core `deploy` workflow when using Secure Store
 
-Description from last quarter:
+Description:
 
 > When following security best practices, keeping secret keys and seed phrases off the file system
 > and instead using macOS Secure Store or a hardware wallet like Ledger, the Registry CLI falls
@@ -1061,7 +1061,7 @@ Description from last quarter:
 
 #### 🟩 D9: `stellar-registry/actions` maturation & adoption
 
-Description from last quarter:
+Description:
 
 > Q3's D11 saw us add automatic Wasm publishing to Registry via GitHub Workflow, added to Registry's
 > own Wasm in stellar-registry/contracts#53. In Q4 we add contract upgrades to the core actions
