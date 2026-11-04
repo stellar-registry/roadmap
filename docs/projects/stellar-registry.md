@@ -991,6 +991,9 @@ Description:
 - https://github.com/stellar-registry/indexer/pull/56, index named accounts and pending
   preauthorizations, with `/v1/accounts` endpoints including lookup by address; pipeline applied on
   testnet and verified with account events on `unverified`
+- https://github.com/stellar-registry/indexer/pull/60, `author_name` and `deployer_name` on Wasm,
+  contract and `/v1/changes` responses (for
+  https://github.com/stellar-registry/ui/issues/105); live on testnet
 - Testnet root and `unverified` registries upgraded to v0.8.0
 
 **⚠️ Pending:**
