@@ -893,7 +893,7 @@ Description:
 
 - https://github.com/stellar-registry/indexer/issues/50, Registry info displayed on Stellar.Expert
 
-#### ⏳ D3: Developer outreach & education
+#### 🟩 D3: Developer outreach & education
 
 Description:
 
@@ -910,10 +910,14 @@ Description:
 >
 > Proof: links to recorded videos or event links
 
+**✅ Complete:**
+
+- https://github.com/stellar-registry/ui/issues/103, presented Registry at HackMeridian:
+  [recording](https://www.youtube.com/live/avVZbiI2Cig?t=15819) (@pselle)
+
 **⚠️ Pending:**
 
 - https://github.com/stellar-registry/cli/issues/34, present Registry at Stellar Community Call
-- https://github.com/stellar-registry/ui/issues/103, present Registry at HackMeridian
 - https://github.com/stellar-registry/ui/issues/104, monthly Office Hours
 
 #### 🟩 D4: Smart account support in the `account` namespace
