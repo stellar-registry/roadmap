@@ -864,7 +864,7 @@ Description:
 
 - https://github.com/stellar-registry/ui/issues/102 (tracking issue): no partner integration PRs yet
 
-#### 🟩 D2: Help Community Projects Show Registry Info
+#### ⏳ D2: Help Community Projects Show Registry Info
 
 Description:
 
@@ -893,7 +893,7 @@ Description:
 
 - https://github.com/stellar-registry/indexer/issues/50, Registry info displayed on Stellar.Expert
 
-#### 🟩 D3: Developer outreach & education
+#### ⏳ D3: Developer outreach & education
 
 Description:
 
@@ -920,7 +920,7 @@ Description:
 - https://github.com/stellar-registry/cli/issues/34, present Registry at Stellar Community Call
 - https://github.com/stellar-registry/ui/issues/104, monthly Office Hours
 
-#### 🟩 D4: Smart account support in the `account` namespace
+#### ⏳ D4: Smart account support in the `account` namespace
 
 Description:
 
@@ -956,7 +956,7 @@ Description:
   commands; blocked upstream on https://github.com/stellar/stellar-cli/issues/2762, with a fix in
   https://github.com/stellar/stellar-cli/pull/2881 (open)
 
-#### 🟩 D5: Named G-addresses, from contract to ecosystem (follow-on from Q3 D8)
+#### ⏳ D5: Named G-addresses, from contract to ecosystem (follow-on from Q3 D8)
 
 Description:
 
@@ -1015,7 +1015,7 @@ Description:
 - https://github.com/stellar-scaffold/cli/issues/613, document named account support: guide merged
   (above); issue still open
 
-#### 🟩 D6: Simplify `import_contract!` testing
+#### ⏳ D6: Simplify `import_contract!` testing
 
 Description:
 
@@ -1082,7 +1082,7 @@ Description:
 - https://github.com/stellar-registry/cli/issues/14: no upstream issues or PRs created yet in
   https://github.com/stellar/stellar-cli
 
-#### 🟩 D9: `stellar-registry/actions` maturation & adoption
+#### ⏳ D9: `stellar-registry/actions` maturation & adoption
 
 Description:
 
