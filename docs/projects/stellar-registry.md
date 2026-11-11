@@ -1015,7 +1015,7 @@ Description:
 - https://github.com/stellar-scaffold/cli/issues/613, document named account support: guide merged
   (above); issue still open
 
-#### ⏳ D6: Simplify `import_contract!` testing
+#### ✅ D6: Simplify `import_contract!` testing
 
 Description:
 
@@ -1034,15 +1034,19 @@ Description:
 
 **✅ Complete:**
 
+Tracking issue https://github.com/stellar-registry/cli/issues/65 closed November 11 once its
+component PRs merged.
+
 - https://github.com/stellar-registry/cli/pull/77, `register_import!` for testing `import_contract!`
   callers
-
-**⚠️ Pending:**
-
-- https://github.com/stellar-registry/cli/issues/65 (tracking issue)
-- https://github.com/stellar-registry/cli/pull/82 (open), Stellar Asset Contract support in
+- https://github.com/stellar-registry/cli/pull/82, Stellar Asset Contract support in
   `register_import!`
-- cut a `stellar-registry` crate release that includes `register_import!`
+- Both released in
+  [stellar-registry v0.1.4](https://github.com/stellar-registry/cli/releases/tag/stellar-registry-v0.1.4)
+  and
+  [stellar-registry-cli v0.3.1](https://github.com/stellar-registry/cli/releases/tag/stellar-registry-cli-v0.3.1)
+- https://github.com/stellar-registry/cli/pull/113, suggest Stellar Scaffold when a local registry
+  lookup fails (merged; ships in the next release)
 
 #### ⏳ D7: Contract Details UI Revamp
 
