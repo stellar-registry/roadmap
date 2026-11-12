@@ -919,6 +919,8 @@ Description:
 
 - https://github.com/stellar-registry/cli/issues/34, present Registry at Stellar Community Call
 - https://github.com/stellar-registry/ui/issues/104, monthly Office Hours
+  - First Office Hours [scheduled for Nov 17](https://luma.com/kzhl15rc?tk=7sRHDZ)
+  - Find out about future Office Hours on [The Aha Company's Luma](https://luma.com/calendar/cal-Twp1yF7MtWoAjrc)
 
 #### ⏳ D4: Smart account support in the `account` namespace
 
