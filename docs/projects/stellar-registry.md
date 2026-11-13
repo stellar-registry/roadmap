@@ -860,9 +860,18 @@ Description:
 > - Merged PRs to integrate Registry into their codebases/workflows
 > - Partner teams' contracts & Wasms exist on Registry and are owned by their teams' accounts
 
+**✅ Complete:**
+
+- XOXNO lending (https://github.com/XOXNO/rs-lending-xlm):
+  - https://github.com/XOXNO/rs-lending-xlm/pull/214, keep contract meta in deploy Wasms
+  - https://github.com/XOXNO/rs-lending-xlm/pull/216, publish released Wasms to Registry as
+    `xoxno/<contract>` (testnet, then mainnet) using stellar-registry/actions
+
 **⚠️ Pending:**
 
-- https://github.com/stellar-registry/ui/issues/102 (tracking issue): no partner integration PRs yet
+- https://github.com/stellar-registry/ui/issues/102 (tracking issue)
+- XOXNO: register the `xoxno` subregistry, so their Wasms and contracts are owned by their account
+- a second partner project
 
 #### ⏳ D2: Help Community Projects Show Registry Info
 
@@ -920,7 +929,8 @@ Description:
 - https://github.com/stellar-registry/cli/issues/34, present Registry at Stellar Community Call
 - https://github.com/stellar-registry/ui/issues/104, monthly Office Hours
   - First Office Hours [scheduled for Nov 17](https://luma.com/kzhl15rc?tk=7sRHDZ)
-  - Find out about future Office Hours on [The Aha Company's Luma](https://luma.com/calendar/cal-Twp1yF7MtWoAjrc)
+  - Find out about future Office Hours on
+    [The Aha Company's Luma](https://luma.com/calendar/cal-Twp1yF7MtWoAjrc)
 
 #### ⏳ D4: Smart account support in the `account` namespace
 
@@ -954,9 +964,9 @@ Description:
 
 - https://github.com/nidohq/nido/issues/238, register a Nido wallet under a name, resolvable on
   rgstry.xyz and from the CLI
-- https://github.com/stellar-registry/cli/issues/92, let smart accounts sign the `account`
-  commands; blocked upstream on https://github.com/stellar/stellar-cli/issues/2762, with a fix in
-  https://github.com/stellar/stellar-cli/pull/2881 (open)
+- https://github.com/stellar-registry/cli/issues/92, let smart accounts sign the `account` commands;
+  blocked upstream on https://github.com/stellar/stellar-cli/issues/2762 (a first fix,
+  https://github.com/stellar/stellar-cli/pull/2881, was closed in favor of evolving the approach)
 
 #### ⏳ D5: Named G-addresses, from contract to ecosystem (follow-on from Q3 D8)
 
@@ -998,18 +1008,22 @@ Description:
   preauthorizations, with `/v1/accounts` endpoints including lookup by address; pipeline applied on
   testnet and verified with account events on `unverified`
 - https://github.com/stellar-registry/indexer/pull/60, `author_name` and `deployer_name` on Wasm,
-  contract and `/v1/changes` responses (for
-  https://github.com/stellar-registry/ui/issues/105); live on testnet
+  contract and `/v1/changes` responses (for https://github.com/stellar-registry/ui/issues/105); live
+  on testnet
 - Testnet root and `unverified` registries upgraded to v0.8.0
+- https://github.com/stellar-registry/contracts/pull/80, cap account preauthorization lifetime at ~7
+  days (merged; not yet released)
 
 **⚠️ Pending:**
 
 - Mainnet: the root registry has no account functions yet (needs the v0.8.0 upgrade), and the
   indexer's account pipeline and API are not yet deployed there
-- https://github.com/stellar-registry/indexer/issues/59, API endpoint for pending
-  preauthorizations; prereq for the governance form in
-  https://github.com/stellar-registry/ui/issues/106
+- https://github.com/stellar-registry/indexer/issues/59, API endpoint for pending preauthorizations;
+  prereq for the governance form in https://github.com/stellar-registry/ui/issues/106
+  - https://github.com/stellar-registry/indexer/pull/63 (open)
 - https://github.com/stellar-registry/ui/issues/105, display account names wherever accounts appear
+  - https://github.com/stellar-registry/ui/pull/120 (draft), names for Wasm authors and contract
+    deployers
 - https://github.com/stellar-registry/ui/issues/106, governance form to request a named account
 - https://github.com/stellar-registry/ui/issues/107, partner teams register names for their accounts
 - https://github.com/stellar-registry/indexer/issues/51, account names in Stellar.Expert
@@ -1017,7 +1031,7 @@ Description:
 - https://github.com/stellar-scaffold/cli/issues/613, document named account support: guide merged
   (above); issue still open
 
-#### ✅ D6: Simplify `import_contract!` testing
+#### ⏳ D6: Simplify `import_contract!` testing
 
 Description:
 
@@ -1049,6 +1063,12 @@ component PRs merged.
   [stellar-registry-cli v0.3.1](https://github.com/stellar-registry/cli/releases/tag/stellar-registry-cli-v0.3.1)
 - https://github.com/stellar-registry/cli/pull/113, suggest Stellar Scaffold when a local registry
   lookup fails (merged; ships in the next release)
+
+**⚠️ Pending:**
+
+- https://github.com/stellar-scaffold/ui/pull/290 (open), Scaffold's `guess-the-number` template
+  contract adopts `register_import!` from stellar-registry v0.1.4, replacing its `#[cfg(test)]`
+  stand-in XLM asset
 
 #### ⏳ D7: Contract Details UI Revamp
 
@@ -1133,6 +1153,12 @@ Description:
 - Partially adopted in Perch: https://github.com/stellar-registry/perch/pull/128 uses the release and
   publish workflows, pinned to a pre-v2.0.0 commit on `main`; repin to a release and contract upgrade
   still pending (https://github.com/stellar-registry/perch/issues/113)
+- Tansu: https://github.com/Consulting-Manao/tansu/issues/255 closed by
+  https://github.com/Consulting-Manao/tansu/pull/269, which registers release Wasms on Registry as a
+  Radicle job (Tansu is moving off GitHub Actions, so it ports the `registry-publish` steps rather
+  than calling the workflow)
+- XOXNO, beyond the planned list: https://github.com/XOXNO/rs-lending-xlm/pull/216 publishes release
+  Wasms with stellar-registry/actions (see D1)
 
 **⚠️ Pending:**
 
@@ -1144,9 +1170,6 @@ Description:
   - https://github.com/stellar-scaffold/ui/issues/280
   - https://github.com/stellar-registry/oz-combined-wasms/issues/4 (open PR
     https://github.com/stellar-registry/oz-combined-wasms/pull/2)
-  - https://github.com/Consulting-Manao/tansu/issues/255 (open PRs
-    https://github.com/Consulting-Manao/tansu/pull/266,
-    https://github.com/Consulting-Manao/tansu/pull/269)
   - https://github.com/nidohq/nido/issues/239
   - https://github.com/stellar-registry/perch/issues/113
   - https://github.com/Moonlight-Protocol/soroban-core/issues/51
