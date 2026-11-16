@@ -866,11 +866,15 @@ Description:
   - https://github.com/XOXNO/rs-lending-xlm/pull/214, keep contract meta in deploy Wasms
   - https://github.com/XOXNO/rs-lending-xlm/pull/216, publish released Wasms to Registry as
     `xoxno/<contract>` (testnet, then mainnet) using stellar-registry/actions
+- https://github.com/pselle/xoxno-integrator-demo, demo integrator contract that calls XOXNO's
+  controller via `import_contract!(env, "xoxno/controller")` and tests it with `register_import!`;
+  deployed on testnet against a dry-run registry
 
 **⚠️ Pending:**
 
 - https://github.com/stellar-registry/ui/issues/102 (tracking issue)
 - XOXNO: register the `xoxno` subregistry, so their Wasms and contracts are owned by their account
+- XOXNO: first release through the new publish workflow (no release cut since it merged)
 - a second partner project
 
 #### ⏳ D2: Help Community Projects Show Registry Info
@@ -928,7 +932,7 @@ Description:
 
 - https://github.com/stellar-registry/cli/issues/34, present Registry at Stellar Community Call
 - https://github.com/stellar-registry/ui/issues/104, monthly Office Hours
-  - First Office Hours [scheduled for Nov 17](https://luma.com/kzhl15rc?tk=7sRHDZ)
+  - First Office Hours [scheduled for Nov 17](https://luma.com/kzhl15rc)
   - Find out about future Office Hours on
     [The Aha Company's Luma](https://luma.com/calendar/cal-Twp1yF7MtWoAjrc)
 
@@ -1011,7 +1015,8 @@ Description:
   contract and `/v1/changes` responses (for https://github.com/stellar-registry/ui/issues/105); live
   on testnet
 - Testnet root and `unverified` registries upgraded to v0.8.0
-- https://github.com/stellar-registry/contracts/pull/80, cap account preauthorization lifetime at ~7
+- https://github.com/stellar-registry/contracts/issues/76, closed by
+  https://github.com/stellar-registry/contracts/pull/80: cap account preauthorization lifetime at ~7
   days (merged; not yet released)
 
 **⚠️ Pending:**
@@ -1149,6 +1154,10 @@ Description:
     stellar-cli
   - https://github.com/stellar-registry/actions/pull/23, deploy even when the publish was already
     done
+- [actions v2.1.0](https://github.com/stellar-registry/actions/releases/tag/v2.1.0):
+  https://github.com/stellar-registry/actions/pull/24, `registry-publish-assets` publishes releases
+  from repos with their own release pipeline (unversioned `<package>.wasm` assets, package selection,
+  upload + publish-hash for oversized Wasms), which XOXNO's publish workflow pins
 - Adopted in Registry's own contracts: https://github.com/stellar-registry/contracts/pull/72
 - Partially adopted in Perch: https://github.com/stellar-registry/perch/pull/128 uses the release and
   publish workflows, pinned to a pre-v2.0.0 commit on `main`; repin to a release and contract upgrade
