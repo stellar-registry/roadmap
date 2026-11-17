@@ -1040,7 +1040,7 @@ Description:
 - https://github.com/stellar-scaffold/cli/issues/613, document named account support: guide merged
   (above); issue still open
 
-#### ⏳ D6: Simplify `import_contract!` testing
+#### ✅ D6: Simplify `import_contract!` testing
 
 Description:
 
@@ -1072,12 +1072,9 @@ component PRs merged.
   [stellar-registry-cli v0.3.1](https://github.com/stellar-registry/cli/releases/tag/stellar-registry-cli-v0.3.1)
 - https://github.com/stellar-registry/cli/pull/113, suggest Stellar Scaffold when a local registry
   lookup fails (merged; ships in the next release)
-
-**⚠️ Pending:**
-
-- https://github.com/stellar-scaffold/ui/pull/290 (open), Scaffold's `guess-the-number` template
-  contract adopts `register_import!` from stellar-registry v0.1.4, replacing its `#[cfg(test)]`
-  stand-in XLM asset
+- https://github.com/stellar-scaffold/ui/pull/290, Scaffold's `guess-the-number` template contract
+  adopts `register_import!` from stellar-registry v0.1.4, replacing its `#[cfg(test)]` stand-in XLM
+  asset (merged November 17)
 
 #### ⏳ D7: Contract Details UI Revamp
 
