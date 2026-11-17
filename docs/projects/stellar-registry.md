@@ -869,11 +869,15 @@ Description:
 - https://github.com/pselle/xoxno-integrator-demo, demo integrator contract that calls XOXNO's
   controller via `import_contract!(env, "xoxno/controller")` and tests it with `register_import!`;
   deployed on testnet against a dry-run registry
+- Testnet `xoxno` subregistry, requested in https://github.com/stellar-registry/gov/issues/4: Tansu
+  proposal executed November 17
+  ([tx](https://stellar.expert/explorer/testnet/tx/57074fb5a6ef490a4329cae446628c480c95d1e1cc59b7ea5886d17c69af6d44)),
+  deploying `xoxno` with XOXNO's account as admin, manager, and owner in the root registry
 
 **⚠️ Pending:**
 
 - https://github.com/stellar-registry/ui/issues/102 (tracking issue)
-- XOXNO: register the `xoxno` subregistry, so their Wasms and contracts are owned by their account
+- XOXNO: mainnet `xoxno` subregistry (https://github.com/stellar-registry/gov/issues/4 still open)
 - XOXNO: first release through the new publish workflow (no release cut since it merged)
 - a second partner project
 
