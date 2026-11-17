@@ -932,7 +932,8 @@ Description:
 - https://github.com/stellar-registry/ui/issues/103, presented Registry at HackMeridian:
   [recording](https://www.youtube.com/live/avVZbiI2Cig?t=15819) (@pselle)
 - https://github.com/stellar-registry/cli/issues/34, presented Registry at the November 12 Stellar
-  Developers Meeting (the weekly community call): [meeting notes](https://developers.stellar.org/meetings/2026/11/12),
+  Developers Meeting (the weekly community call):
+  [meeting notes](https://developers.stellar.org/meetings/2026/11/12),
   [recording](https://www.youtube.com/watch?v=zTZtF1jL2H0) (@chadoh, @pselle)
 
 **⚠️ Pending:**
